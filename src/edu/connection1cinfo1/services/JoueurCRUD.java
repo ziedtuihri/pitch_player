@@ -6,6 +6,7 @@
 package edu.connection1cinfo1.services;
 
 import edu.connection1cinfo1.entities.Equipe;
+import edu.connection1cinfo1.entities.Joueur;
 import edu.connection1cinfo1.interfaces.ICRUD;
 import java.util.List;
 
@@ -13,31 +14,32 @@ import java.util.List;
  *
  * @author WIJDEN
  */
-public class JoueurCRUD implements ICRUD<Equipe>{
+public class JoueurCRUD implements ICRUD<Joueur>{
 
     @Override
-    public void addEntity(Equipe t) {
+    public void addEntity(Joueur t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Equipe> displayEntities() {
+    public List<Joueur> displayEntities() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Equipe getById(int id) {
+    public Joueur getById(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void update(Equipe entity) {
+    public void update(Joueur entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void delete(Equipe entity) {
+    public void delete(Joueur entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
 }
