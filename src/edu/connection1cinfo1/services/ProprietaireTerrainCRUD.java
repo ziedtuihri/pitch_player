@@ -25,7 +25,7 @@ import java.util.List;
 public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
     public void addEntity(ProprietaireTerrain t) {
         try{
-            String request = "INSERT INTO proprietaireTerrain (nom_prop, prenom_prop," +
+            String request = "INSERT INTO proprietaire_terrain (nom_prop, prenom_prop," +
                     " email_prop, password_prop," +
                     " adresse_prop, telephone_prop, informations_terrain,terrain_id," +
                     " joueur_id ) VALUES"+"(?,?,?,?,?,?,?,?)";
@@ -53,7 +53,7 @@ public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
     public List<ProprietaireTerrain> displayEntities() {
         List<ProprietaireTerrain> myList = new ArrayList<>();
         try{
-            String requet = "SELECT * FROM ProprietaireTerrain";
+            String requet = "SELECT * FROM proprietaire_terrain";
             Statement st = MyConnection
                     .getInstance()
                     .getCnx()
@@ -86,7 +86,7 @@ public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
     }
 
     public void update(ProprietaireTerrain entity) {
-        String requet = "UPDATE proprietaireTerrain SET nom_prop = ?, prenom_prop = ? WHERE  id_prop = ?";
+        String requet = "UPDATE proprietaire_terrain SET nom_prop = ?, prenom_prop = ? WHERE  id_prop = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setString(1, entity.getNom());
             pst.setString(2, entity.getPrenom());
@@ -103,7 +103,7 @@ public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
     }
 
     public void delete(ProprietaireTerrain entity) {
-        String requet = "DELETE FROM proprietaireTerrain WHERE id_equipe = ?";
+        String requet = "DELETE FROM proprietaire_terrain WHERE id_equipe = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setInt(1, entity.getId());
 

@@ -50,7 +50,7 @@ public class MatchCRUD implements ICRUD<Match>{
     public List<Match> displayEntities() {
         List<Match> myList = new ArrayList<>();
         try{
-            String requet = "SELECT * FROM match";
+            String requet = "SELECT * FROM `match`";
             Statement st = MyConnection
                     .getInstance()
                     .getCnx()

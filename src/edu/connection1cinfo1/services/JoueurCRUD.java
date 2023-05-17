@@ -5,10 +5,11 @@
  */
 package edu.connection1cinfo1.services;
 
-import edu.connection1cinfo1.entities.Equipe;
 import edu.connection1cinfo1.entities.Joueur;
 import edu.connection1cinfo1.interfaces.ICRUD;
 import edu.connection1cinfo1.utils.MyConnection;
+
+import java.sql.Date;
 
 import java.sql.*;
 import java.util.ArrayList;
