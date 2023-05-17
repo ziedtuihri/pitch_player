@@ -7,7 +7,7 @@ package edu.connection1cinfo1.entities;
 
 /**
  *
- * @author WIJDEN
+ * @author Zied
  */
 public class Equipe {
 
