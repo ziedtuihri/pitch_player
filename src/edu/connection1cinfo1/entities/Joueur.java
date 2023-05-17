@@ -9,7 +9,7 @@ import java.sql.Date;
 
 /**
  *
- * @author WIJDEN
+ * @author Zied
  */
 public class Joueur {
 
@@ -18,7 +18,7 @@ public class Joueur {
     private String prenom;
     private String email;
     private String password;
-    private Date dateNaissance;
+    private String dateNaissance;
     private String numeroTelephone;
     private String positionJeu;
     private String piedFortDominant;
@@ -26,11 +26,61 @@ public class Joueur {
     private int poids;
     private int experienceJeu;
     private int nbrButs;
-    private Equipe equipe; //represents relationship between Equipe and Joueur joueur belongs to 1 and only equipe
+
+    @Override
+    public String toString() {
+        return "Joueur{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", dateNaissance='" + dateNaissance + '\'' +
+                ", numeroTelephone='" + numeroTelephone + '\'' +
+                ", positionJeu='" + positionJeu + '\'' +
+                ", piedFortDominant='" + piedFortDominant + '\'' +
+                ", taille=" + taille +
+                ", poids=" + poids +
+                ", experienceJeu=" + experienceJeu +
+                ", nbrButs=" + nbrButs +
+                ", Idequipe=" + Idequipe +
+                '}';
+    }
+
+    public Joueur(int id, String nom, String prenom) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    private int  Idequipe; //represents relationship between Equipe and Joueur joueur belongs to 1 and only equipe
 
     public Joueur() {
     }
-    //here insert other constructos if needed
+
+    public void setIdequipe(int idequipe) {
+        Idequipe = idequipe;
+    }
+
+    public int getIdequipe() {
+        return this.Idequipe;
+    }
+
+    public Joueur(String nom, String prenom, String email, String password, String dateNaissance, String numeroTelephone, String positionJeu, String piedFortDominant, int taille, int poids, int experienceJeu, int nbrButs, int idequipe) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.password = password;
+        this.dateNaissance = dateNaissance;
+        this.numeroTelephone = numeroTelephone;
+        this.positionJeu = positionJeu;
+        this.piedFortDominant = piedFortDominant;
+        this.taille = taille;
+        this.poids = poids;
+        this.experienceJeu = experienceJeu;
+        this.nbrButs = nbrButs;
+        Idequipe = idequipe;
+    }
 
     public int getId() {
         return id;
@@ -52,7 +102,7 @@ public class Joueur {
         return password;
     }
 
-    public Date getDateNaissance() {
+    public String getDateNaissance() {
         return dateNaissance;
     }
 
@@ -84,9 +134,6 @@ public class Joueur {
         return nbrButs;
     }
 
-    public Equipe getEquipe() {
-        return equipe;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -108,7 +155,7 @@ public class Joueur {
         this.password = password;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
@@ -139,13 +186,5 @@ public class Joueur {
     public void setNbrButs(int nbrButs) {
         this.nbrButs = nbrButs;
     }
-
-    public void setEquipe(Equipe equipe) {
-        this.equipe = equipe;
-    }
-
-    
-    
-    
 
 }
