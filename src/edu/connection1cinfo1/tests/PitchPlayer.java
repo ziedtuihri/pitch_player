@@ -5,8 +5,10 @@
  */
 package edu.connection1cinfo1.tests;
 
+import edu.connection1cinfo1.entities.Admin;
 import edu.connection1cinfo1.entities.Equipe;
 import edu.connection1cinfo1.entities.Joueur;
+import edu.connection1cinfo1.services.AdminCRUD;
 import edu.connection1cinfo1.services.EquipeCRUD;
 import edu.connection1cinfo1.services.JoueurCRUD;
 import java.sql.Date;
@@ -26,6 +28,8 @@ public class PitchPlayer {
 
         // ajouté joueur
         Equipe equipe = new Equipe(7, "equipe5", 1999);
+
+        Admin admin = new Admin("name1", "prenom3", "emial@@", "password", "1234567", "adress");
 
         Joueur joueur = new Joueur(
                 "zied3355",
@@ -63,6 +67,14 @@ public class PitchPlayer {
          //joueurCRUD.update(joueurUpdate);
         // joueurCRUD.delete(equipe);
         // System.out.println(joueurCRUD.displayEntities());
+
+        // CRUD Admin
+        AdminCRUD adminCRUD = new AdminCRUD();
+
+        // equipeCRUD.adminCRUD(equipe);
+        // equipeCRUD.adminCRUD(equipe);
+        // equipeCRUD.adminCRUD(equipe);
+        // System.out.println(adminCRUD.displayEntities());
 
     }
 

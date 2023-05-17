@@ -19,13 +19,36 @@ public class Match {
     private String score;
     private String type;
     private String commentaire;
-    private Tournoi tournoi; //Match can be part of a Tournoi
-    private Equipe equipe; //Match can be played by 1 or many Equipes
-    private Joueur joueur; //Match can be played by 1 or many Players if it doesn't belong to a Tournoi (match amical)
+    private int tournoiID; //Match can be part of a Tournoi
+    private int equipeID; //Match can be played by 1 or many Equipes
+    private int joueurID; //Match can be played by 1 or many Players if it doesn't belong to a Tournoi (match amical)
 
     public Match() {
     }
-    
+
+    public void setTournoiID(int tournoiID) {
+        this.tournoiID = tournoiID;
+    }
+
+    public void setEquipeID(int equipeID) {
+        this.equipeID = equipeID;
+    }
+
+    public void setJoueurID(int joueurID) {
+        this.joueurID = joueurID;
+    }
+
+    public int getTournoiID() {
+        return tournoiID;
+    }
+
+    public int getEquipeID() {
+        return equipeID;
+    }
+
+    public int getJoueurID() {
+        return joueurID;
+    }
     //generate constructor with parameters here
 
     public int getId() {
@@ -56,17 +79,7 @@ public class Match {
         return commentaire;
     }
 
-    public Tournoi getTournoi() {
-        return tournoi;
-    }
 
-    public Equipe getEquipe() {
-        return equipe;
-    }
-
-    public Joueur getJoueur() {
-        return joueur;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -96,21 +109,9 @@ public class Match {
         this.commentaire = commentaire;
     }
 
-    public void setTournoi(Tournoi tournoi) {
-        this.tournoi = tournoi;
-    }
-
-    public void setEquipe(Equipe equipe) {
-        this.equipe = equipe;
-    }
-
-    public void setJoueur(Joueur joueur) {
-        this.joueur = joueur;
-    }
-
     @Override
     public String toString() {
-        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", score=" + score + ", type=" + type + ", commentaire=" + commentaire + ", tournoi=" + tournoi + ", equipe=" + equipe + ", joueur=" + joueur + '}';
+        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", score=" + score + ", type=" + type + ", commentaire=" + commentaire + ", tournoi=" + tournoiID + ", equipe=" + equipeID + ", joueur=" + joueurID + '}';
     }
     
     
