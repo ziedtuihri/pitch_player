@@ -9,7 +9,7 @@ import java.sql.Date;
 
 /**
  *
- * @author WIJDEN
+ * @author Zied
  */
 public class Match {
     private int id;

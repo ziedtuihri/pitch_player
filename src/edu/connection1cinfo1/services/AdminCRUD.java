@@ -7,7 +7,7 @@ package edu.connection1cinfo1.services;
 
 /**
  *
- * @author WIJDEN
+ * @author Zied
  */
 public class AdminCRUD {
     

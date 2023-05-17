@@ -9,12 +9,12 @@ import java.util.List;
 
 /**
  *
- * @author WIJDEN
+ * @author Zied
  */
 public interface ICRUD<T> {
 
     //create    
-    public void addEntity(T t);
+    public void addEntity(T entity);
 
     //Retrieve all entities
     public List<T> displayEntities();
