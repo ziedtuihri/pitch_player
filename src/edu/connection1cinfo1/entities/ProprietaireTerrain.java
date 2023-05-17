@@ -19,7 +19,15 @@ public class ProprietaireTerrain {
     private String adresse;
     private String telephone;
     private String informationsTerrain;
-    private Terrain terrain; //this is the table which Prop is related to  Terrain has 1 Owner
+    private int terrainID; //this is the table which Prop is related to  Terrain has 1 Owner
+
+    public void setTerrainID(int terrainID) {
+        this.terrainID = terrainID;
+    }
+
+    public int getTerrainID() {
+        return terrainID;
+    }
 
     public ProprietaireTerrain() {
     }
@@ -58,9 +66,6 @@ public class ProprietaireTerrain {
         return informationsTerrain;
     }
 
-    public Terrain getTerrain() {
-        return terrain;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -94,13 +99,10 @@ public class ProprietaireTerrain {
         this.informationsTerrain = informationsTerrain;
     }
 
-    public void setTerrain(Terrain terrain) {
-        this.terrain = terrain;
-    }
 
     @Override
     public String toString() {
-        return "ProprietaireTerrain{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", adresse=" + adresse + ", telephone=" + telephone + ", informationsTerrain=" + informationsTerrain + ", terrain=" + terrain + '}';
+        return "ProprietaireTerrain{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", adresse=" + adresse + ", telephone=" + telephone + ", informationsTerrain=" + informationsTerrain + ", terrain=" + terrainID + '}';
     }
 
 }

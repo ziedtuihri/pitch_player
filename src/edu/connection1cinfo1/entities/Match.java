@@ -26,6 +26,18 @@ public class Match {
     public Match() {
     }
 
+    public Match(String nom, Date date, String statut, String score, String type, String commentaire, int tournoiID, int equipeID, int joueurID) {
+        this.nom = nom;
+        this.date = date;
+        this.statut = statut;
+        this.score = score;
+        this.type = type;
+        this.commentaire = commentaire;
+        this.tournoiID = tournoiID;
+        this.equipeID = equipeID;
+        this.joueurID = joueurID;
+    }
+
     public void setTournoiID(int tournoiID) {
         this.tournoiID = tournoiID;
     }
