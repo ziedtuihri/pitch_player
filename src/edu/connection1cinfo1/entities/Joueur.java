@@ -18,7 +18,7 @@ public class Joueur {
     private String prenom;
     private String email;
     private String password;
-    private String dateNaissance;
+    private Date dateNaissance;
     private String numeroTelephone;
     private String positionJeu;
     private String piedFortDominant;
@@ -66,7 +66,7 @@ public class Joueur {
         return this.Idequipe;
     }
 
-    public Joueur(String nom, String prenom, String email, String password, String dateNaissance, String numeroTelephone, String positionJeu, String piedFortDominant, int taille, int poids, int experienceJeu, int nbrButs, int idequipe) {
+    public Joueur(String nom, String prenom, String email, String password, Date dateNaissance, String numeroTelephone, String positionJeu, String piedFortDominant, int taille, int poids, int experienceJeu, int nbrButs, int idequipe) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -102,7 +102,7 @@ public class Joueur {
         return password;
     }
 
-    public String getDateNaissance() {
+    public Date getDateNaissance() {
         return dateNaissance;
     }
 
@@ -155,7 +155,7 @@ public class Joueur {
         this.password = password;
     }
 
-    public void setDateNaissance(String dateNaissance) {
+    public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 

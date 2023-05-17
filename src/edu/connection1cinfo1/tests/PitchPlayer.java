@@ -9,6 +9,8 @@ import edu.connection1cinfo1.entities.Equipe;
 import edu.connection1cinfo1.entities.Joueur;
 import edu.connection1cinfo1.services.EquipeCRUD;
 import edu.connection1cinfo1.services.JoueurCRUD;
+import java.sql.Date;
+
 import edu.connection1cinfo1.utils.MyConnection;
 
 /**
@@ -26,11 +28,11 @@ public class PitchPlayer {
         Equipe equipe = new Equipe(7, "equipe5", 1999);
 
         Joueur joueur = new Joueur(
-                "zied33",
-                "th33",
+                "zied3355",
+                "th3355",
                 "email@gmail.com",
                 "12345",
-                "10/10/1000",
+                Date.valueOf("2000-10-10"),
                 "00000000006",
                 "position jeu",
                 "pied front",
@@ -57,7 +59,7 @@ public class PitchPlayer {
 
         // CRUD Joueur
         JoueurCRUD joueurCRUD = new JoueurCRUD();
-        // joueurCRUD.addEntity(joueur);
+         joueurCRUD.addEntity(joueur);
          //joueurCRUD.update(joueurUpdate);
         // joueurCRUD.delete(equipe);
         // System.out.println(joueurCRUD.displayEntities());

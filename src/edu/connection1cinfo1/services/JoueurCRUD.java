@@ -58,7 +58,7 @@ public class JoueurCRUD implements ICRUD<Joueur>{
                 p.setPrenom(rs.getString("prenom_joueur"));
                 p.setEmail(rs.getString("email_joueur"));
                 p.setPassword(rs.getString("password_joueur"));
-                p.setDateNaissance(rs.getString("date_naissance"));
+                p.setDateNaissance(rs.getDate("date_naissance"));
                 p.setNumeroTelephone(rs.getString("numero_telephone"));
                 p.setPositionJeu(rs.getString("position_jeu"));
                 p.setPiedFortDominant(rs.getString("pied_fort_dominant"));
