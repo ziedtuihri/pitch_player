@@ -21,6 +21,23 @@ public class ProprietaireTerrain {
     private String informationsTerrain;
     private int terrainID; //this is the table which Prop is related to  Terrain has 1 Owner
 
+    public ProprietaireTerrain(int id, String nom, String prenom) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    public ProprietaireTerrain(String nom, String prenom, String email, String password, String adresse, String telephone, String informationsTerrain, int terrainID) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.password = password;
+        this.adresse = adresse;
+        this.telephone = telephone;
+        this.informationsTerrain = informationsTerrain;
+        this.terrainID = terrainID;
+    }
+
     public void setTerrainID(int terrainID) {
         this.terrainID = terrainID;
     }

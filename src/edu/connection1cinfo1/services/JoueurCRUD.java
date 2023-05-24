@@ -102,7 +102,7 @@ public class JoueurCRUD implements ICRUD<Joueur>{
 
     @Override
     public void delete(Joueur entity) {
-        String requet = "DELETE FROM joueur WHERE id_equipe = ?";
+        String requet = "DELETE FROM joueur WHERE id_joueur = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setInt(1, entity.getId());
 

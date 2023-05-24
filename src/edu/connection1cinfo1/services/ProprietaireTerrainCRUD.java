@@ -27,8 +27,8 @@ public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
         try{
             String request = "INSERT INTO proprietaire_terrain (nom_prop, prenom_prop," +
                     " email_prop, password_prop," +
-                    " adresse_prop, telephone_prop, informations_terrain,terrain_id," +
-                    " joueur_id ) VALUES"+"(?,?,?,?,?,?,?,?)";
+                    " adresse_prop, telephone_prop, informations_terrain,terrain_id" +
+                    ") VALUES"+"(?,?,?,?,?,?,?,?)";
 
             PreparedStatement pst = MyConnection.getInstance().getCnx()
                     .prepareStatement(request);
@@ -103,7 +103,7 @@ public class ProprietaireTerrainCRUD implements ICRUD<ProprietaireTerrain>{
     }
 
     public void delete(ProprietaireTerrain entity) {
-        String requet = "DELETE FROM proprietaire_terrain WHERE id_equipe = ?";
+        String requet = "DELETE FROM proprietaire_terrain WHERE id_prop = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setInt(1, entity.getId());
 

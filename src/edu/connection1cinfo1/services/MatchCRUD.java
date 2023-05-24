@@ -23,7 +23,7 @@ import java.sql.Date;
 public class MatchCRUD implements ICRUD<Match>{
     public void addEntity(Match t) {
         try{
-            String request = "INSERT INTO match (nom_match, date_match, statut_match, score_match," +
+            String request = "INSERT INTO `match` (nom_match, date_match, statut_match, score_match," +
                     " type_match, commentaire_match, tournoi_id,equipe_id, joueur_id ) VALUES"+"(?,?,?,?,?,?,?,?,?)";
 
             PreparedStatement pst = MyConnection.getInstance().getCnx()
@@ -37,9 +37,9 @@ public class MatchCRUD implements ICRUD<Match>{
             pst.setString(6, t.getCommentaire());
             pst.setInt(7, t.getTournoiID());
             pst.setInt(8, t.getEquipeID());
-            pst.setInt(8, t.getJoueurID());
+            pst.setInt(9, t.getJoueurID());
             pst.executeUpdate();
-            System.out.println("Match ajoute");
+            System.out.println("Match ajouté");
 
 
         } catch (SQLException ex) {
@@ -84,7 +84,7 @@ public class MatchCRUD implements ICRUD<Match>{
     }
 
     public void update(Match entity) {
-        String requet = "UPDATE match SET nom_match = ?, date_match = ? WHERE  id_match = ?";
+        String requet = "UPDATE `match` SET nom_match = ?, date_match = ? WHERE  id_match = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setString(1, entity.getNom());
             pst.setDate(2, entity.getDate());
@@ -101,7 +101,7 @@ public class MatchCRUD implements ICRUD<Match>{
     }
 
     public void delete(Match entity) {
-        String requet = "DELETE FROM match WHERE id_equipe = ?";
+        String requet = "DELETE FROM `match` WHERE id_match = ?";
         try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
             pst.setInt(1, entity.getId());
 
