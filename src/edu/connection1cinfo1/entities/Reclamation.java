@@ -9,7 +9,7 @@ import java.sql.Date;
 
 /**
  *
- * @author WIJDEN
+ * @author ZIED
  */
 public class Reclamation {
 
@@ -18,13 +18,27 @@ public class Reclamation {
     private String objet;
     private String contenu;
     private String statut;
-    private Joueur joueur;
-    private ProprietaireTerrain proprietaireTerrain;
+    private int joueurID;
+    private int proprietaireTerrainID;
 
     public Reclamation() {
     }
 
-    //generate constructo with parameters here
+    public Reclamation(Date date, String objet, String contenu, String statut, int joueurID, int proprietaireTerrainID) {
+        this.date = date;
+        this.objet = objet;
+        this.contenu = contenu;
+        this.statut = statut;
+        this.joueurID = joueurID;
+        this.proprietaireTerrainID = proprietaireTerrainID;
+    }
+
+    public Reclamation(int id, Date date, String contenu) {
+        this.id = id;
+        this.date = date;
+        this.contenu = contenu;
+    }
+//generate constructo with parameters here
     
     public int getId() {
         return id;
@@ -46,12 +60,12 @@ public class Reclamation {
         return statut;
     }
 
-    public Joueur getJoueur() {
-        return joueur;
+    public int getJoueurID() {
+        return joueurID;
     }
 
-    public ProprietaireTerrain getProprietaireTerrain() {
-        return proprietaireTerrain;
+    public int getProprietaireTerrainID() {
+        return proprietaireTerrainID;
     }
 
     public void setId(int id) {
@@ -74,17 +88,17 @@ public class Reclamation {
         this.statut = statut;
     }
 
-    public void setJoueur(Joueur joueur) {
-        this.joueur = joueur;
+    public void setJoueurID(int joueurID) {
+        this.joueurID = joueurID;
     }
 
-    public void setProprietaireTerrain(ProprietaireTerrain proprietaireTerrain) {
-        this.proprietaireTerrain = proprietaireTerrain;
+    public void setProprietaireTerrainID(int proprietaireTerrainID) {
+        this.proprietaireTerrainID = proprietaireTerrainID;
     }
 
     @Override
     public String toString() {
-        return "Reclamation{" + "id=" + id + ", date=" + date + ", objet=" + objet + ", contenu=" + contenu + ", statut=" + statut + ", joueur=" + joueur + ", proprietaireTerrain=" + proprietaireTerrain + '}';
+        return "Reclamation{" + "id=" + id + ", date=" + date + ", objet=" + objet + ", contenu=" + contenu + ", statut=" + statut + ", joueur=" + joueurID + ", proprietaireTerrain=" + proprietaireTerrainID + '}';
     }
     
     

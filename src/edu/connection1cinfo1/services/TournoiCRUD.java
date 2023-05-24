@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author WIJDEN
+ * @author ZIED
  */
 public class TournoiCRUD implements ICRUD<Equipe>{
 

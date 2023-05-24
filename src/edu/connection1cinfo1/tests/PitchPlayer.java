@@ -14,7 +14,7 @@ import edu.connection1cinfo1.utils.MyConnection;
 
 /**
  *
- * @author WIJDEN
+ * @author ZIED
  */
 public class PitchPlayer {
 
@@ -36,11 +36,6 @@ public class PitchPlayer {
         Admin admin = new Admin("name1", "prenom3", "emial@@", "password",
                 "1234567", "adress");
 
-        Match match = new Match("name10", sqlDate,
-                                "status10", "score10",
-                                "type", "commentaire",
-                                1, 1, 25);
-
         Joueur joueur = new Joueur(
                 "zied3355", "th3355", "email@gmail.com",
                 "12345", sqlDate, "00000000006",
@@ -50,19 +45,54 @@ public class PitchPlayer {
                 equipe.getId()
         );
 
+        Match match = new Match("name10", sqlDate,
+                                "status10", "score10",
+                                "type", "commentaire",
+                                1, 1, 25);
+
         ProprietaireTerrain propTerrain = new ProprietaireTerrain(
                 "namePropTerrain","prenomPrepTerrain","email@mail","pass123",
                 "adress1", "1234567", "infoTerrain", 1);
 
+        Reclamation reclamation = new Reclamation(
+                sqlDate,
+                "object ...",
+                "contenue",
+                "status",
+                9,
+                2
+        );
+
+        Reservation reservation = new Reservation(
+                sqlDate,
+                "statusss",
+                20.22F,
+                9,
+                1
+        );
+
+        // all constructor UPDATE
         Joueur joueurUpdate = new Joueur(
                 9, "zied33", "th33"
         );
 
+        Match matchUpdate = new Match(
+                2, "name99", sqlDate);
+
         ProprietaireTerrain propTerrainUpdate = new ProprietaireTerrain(
                 3, "nome55", "prenom77");
 
-        Match matchUpdate = new Match(
-                2, "name99", sqlDate);
+        Reclamation reclamationUpdate = new Reclamation(
+                2,
+                sqlDate,
+                "contenuuuuu"
+        );
+
+        Reservation reservationUpdate = new Reservation(
+                2,
+                "statussUPDATED",
+                99.99F
+        );
 
         // CRUD Equipe
         EquipeCRUD equipeCRUD = new EquipeCRUD();
@@ -70,14 +100,14 @@ public class PitchPlayer {
         // equipeCRUD.addEntity(equipe);
         // equipeCRUD.update(equipe);
         // equipeCRUD.delete(equipe);
-         // System.out.println(equipeCRUD.displayEntities());
+        System.out.println(equipeCRUD.displayEntities());
 
         // CRUD Joueur
         JoueurCRUD joueurCRUD = new JoueurCRUD();
          // joueurCRUD.addEntity(joueur);
          // joueurCRUD.update(joueurUpdate);
          // joueurCRUD.delete(joueurUpdate);
-         // System.out.println(joueurCRUD.displayEntities());
+        System.out.println(joueurCRUD.displayEntities());
 
         // CRUD Admin
         AdminCRUD adminCRUD = new AdminCRUD();
@@ -85,23 +115,41 @@ public class PitchPlayer {
         // adminCRUD.addEntity(admin);
         // adminCRUD.update(equipe);
         // adminCRUD.delete(equipe);
-         // System.out.println(adminCRUD.displayEntities());
+        System.out.println(adminCRUD.displayEntities());
 
-        // CRUD Admin
+        // CRUD Match
         MatchCRUD matchCRUD = new MatchCRUD();
 
          // matchCRUD.addEntity(match);
          // matchCRUD.update(matchUpdate);
         //  matchCRUD.delete(matchUpdate);
-        // System.out.println(matchCRUD.displayEntities());
+         System.out.println(matchCRUD.displayEntities());
 
-        // CRUD Admin
+        // CRUD proprietaireTerrain
         ProprietaireTerrainCRUD proprietaireTerrainCRUD = new ProprietaireTerrainCRUD();
 
         // proprietaireTerrainCRUD.addEntity(propTerrain);
         // proprietaireTerrainCRUD.update(propTerrainUpdate);
-         proprietaireTerrainCRUD.delete(propTerrainUpdate);
-        // System.out.println(proprietaireTerrainCRUD.displayEntities());
+        // proprietaireTerrainCRUD.delete(propTerrainUpdate);
+         System.out.println(proprietaireTerrainCRUD.displayEntities());
+
+        // CRUD Reclamation
+        ReclamationCRUD reclamationCRUD = new ReclamationCRUD();
+
+        //reclamationCRUD.addEntity(reclamation);
+        //reclamationCRUD.update(reclamationUpdate);
+        //reclamationCRUD.delete(reclamationUpdate);
+        System.out.println(reclamationCRUD.displayEntities());
+
+        // CRUD Reservation
+        ReservationCRUD reservationCRUD = new ReservationCRUD();
+
+        //reservationCRUD.addEntity(reservation);
+        //reservationCRUD.update(reservationUpdate);
+        //reservationCRUD.delete(reservationUpdate);
+        System.out.println(reservationCRUD.displayEntities());
+
+
     }
 
 }
