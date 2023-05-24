@@ -80,6 +80,14 @@ public class PitchPlayer {
                 "Dispo99"
         );
 
+        Tournoi tournoi = new Tournoi(
+                "NomTournoi",
+                350,
+                sqlDate,
+                sqlDate,
+                "fi tela "
+        );
+
 
         //*** ALL  UPDATE ***//
 
@@ -109,6 +117,13 @@ public class PitchPlayer {
                 1,
                 "nomTerrainUpdated",
                 "adress 09 __"
+        );
+
+        Tournoi tournoiUpdate = new Tournoi(
+                4,
+                "NomUpdated",
+                1000,
+                sqlDate
         );
 
         // CRUD Equipe
@@ -172,7 +187,15 @@ public class PitchPlayer {
         //terrainCRUD.addEntity(terrain);
         //terrainCRUD.update(terrainUpdate);
         //terrainCRUD.delete(terrainUpdate);
-        System.out.println(reservationCRUD.displayEntities());
+        System.out.println(terrainCRUD.displayEntities());
+
+        // CRUD Tournoi
+        TournoiCRUD tournoiCRUD = new TournoiCRUD();
+
+        tournoiCRUD.addEntity(tournoi);
+        //tournoiCRUD.update(tournoiUpdate);
+        //tournoiCRUD.delete(tournoiUpdate);
+        System.out.println(tournoiCRUD.displayEntities());
     }
 
 }

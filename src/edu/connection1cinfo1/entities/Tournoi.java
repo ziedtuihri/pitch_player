@@ -20,6 +20,21 @@ public class Tournoi {
     private Date dateFin;
     private String lieu;
 
+    public Tournoi(int id, String nom, int nbrParticipant, Date dateDebut) {
+        this.id = id;
+        this.nom = nom;
+        this.nbrParticipant = nbrParticipant;
+        this.dateDebut = dateDebut;
+    }
+
+    public Tournoi(String nom, int nbrParticipant, Date dateDebut, Date dateFin, String lieu) {
+        this.nom = nom;
+        this.nbrParticipant = nbrParticipant;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.lieu = lieu;
+    }
+
     public Tournoi() {
     }
 
