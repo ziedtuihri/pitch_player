@@ -18,11 +18,25 @@ public class Terrain {
     private String dimensions;
     private String equipements; //can be changed to a SET: Set<String> equipementsTerrain
                                //because the equipments are a list of equipements we can work on it later
-    private String disponibilite;
+    private String disponibilite;  // RQ a discuté disponibilite doit etre boolean
 
     public Terrain() {
     }
-    
+
+    public Terrain(int id, String nom, String adresse) {
+        this.id = id;
+        this.nom = nom;
+        this.adresse = adresse;
+    }
+
+    public Terrain(String nom, String adresse, String ville, String dimensions, String equipements, String disponibilite) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.dimensions = dimensions;
+        this.equipements = equipements;
+        this.disponibilite = disponibilite;
+    }
     //generate constuctor with parameters here
 
     public int getId() {

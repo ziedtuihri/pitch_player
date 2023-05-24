@@ -71,7 +71,18 @@ public class PitchPlayer {
                 1
         );
 
-        // all constructor UPDATE
+        Terrain terrain = new Terrain(
+                "Terrain1",
+                "Adress2",
+                "Ville3",
+                "Dimention77",
+                "Equipement99",
+                "Dispo99"
+        );
+
+
+        //*** ALL  UPDATE ***//
+
         Joueur joueurUpdate = new Joueur(
                 9, "zied33", "th33"
         );
@@ -92,6 +103,12 @@ public class PitchPlayer {
                 2,
                 "statussUPDATED",
                 99.99F
+        );
+
+        Terrain terrainUpdate = new Terrain(
+                1,
+                "nomTerrainUpdated",
+                "adress 09 __"
         );
 
         // CRUD Equipe
@@ -149,7 +166,13 @@ public class PitchPlayer {
         //reservationCRUD.delete(reservationUpdate);
         System.out.println(reservationCRUD.displayEntities());
 
+        // CRUD Terrain
+        TerrainCRUD terrainCRUD = new TerrainCRUD();
 
+        //terrainCRUD.addEntity(terrain);
+        //terrainCRUD.update(terrainUpdate);
+        //terrainCRUD.delete(terrainUpdate);
+        System.out.println(reservationCRUD.displayEntities());
     }
 
 }
