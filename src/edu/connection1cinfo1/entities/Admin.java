@@ -7,7 +7,7 @@ package edu.connection1cinfo1.entities;
 
 /**
  *
- * @author ZIED
+ * @author WIJDEN
  */
 public class Admin {
 

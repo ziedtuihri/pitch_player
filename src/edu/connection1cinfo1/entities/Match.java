@@ -9,7 +9,7 @@ import java.sql.Date;
 
 /**
  *
- * @author Zied
+ * @author WIJDEN
  */
 public class Match {
     private int id;
@@ -19,54 +19,13 @@ public class Match {
     private String score;
     private String type;
     private String commentaire;
-    private int tournoiID; //Match can be part of a Tournoi
-    private int equipeID; //Match can be played by 1 or many Equipes
-    private int joueurID; //Match can be played by 1 or many Players if it doesn't belong to a Tournoi (match amical)
+    private Tournoi tournoi; //Match can be part of a Tournoi
+    private Equipe equipe; //Match can be played by 1 or many Equipes
+    private Joueur joueur; //Match can be played by 1 or many Players if it doesn't belong to a Tournoi (match amical)
 
     public Match() {
     }
-
-    public Match(int id, String nom, Date date) {
-        this.id = id;
-        this.nom = nom;
-        this.date = date;
-    }
-
-    public Match(String nom, Date date, String statut, String score, String type, String commentaire, int tournoiID, int equipeID, int joueurID) {
-        this.nom = nom;
-        this.date = date;
-        this.statut = statut;
-        this.score = score;
-        this.type = type;
-        this.commentaire = commentaire;
-        this.tournoiID = tournoiID;
-        this.equipeID = equipeID;
-        this.joueurID = joueurID;
-    }
-
-    public void setTournoiID(int tournoiID) {
-        this.tournoiID = tournoiID;
-    }
-
-    public void setEquipeID(int equipeID) {
-        this.equipeID = equipeID;
-    }
-
-    public void setJoueurID(int joueurID) {
-        this.joueurID = joueurID;
-    }
-
-    public int getTournoiID() {
-        return tournoiID;
-    }
-
-    public int getEquipeID() {
-        return equipeID;
-    }
-
-    public int getJoueurID() {
-        return joueurID;
-    }
+    
     //generate constructor with parameters here
 
     public int getId() {
@@ -97,7 +56,17 @@ public class Match {
         return commentaire;
     }
 
+    public Tournoi getTournoi() {
+        return tournoi;
+    }
 
+    public Equipe getEquipe() {
+        return equipe;
+    }
+
+    public Joueur getJoueur() {
+        return joueur;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -127,9 +96,21 @@ public class Match {
         this.commentaire = commentaire;
     }
 
+    public void setTournoi(Tournoi tournoi) {
+        this.tournoi = tournoi;
+    }
+
+    public void setEquipe(Equipe equipe) {
+        this.equipe = equipe;
+    }
+
+    public void setJoueur(Joueur joueur) {
+        this.joueur = joueur;
+    }
+
     @Override
     public String toString() {
-        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", score=" + score + ", type=" + type + ", commentaire=" + commentaire + ", tournoi=" + tournoiID + ", equipe=" + equipeID + ", joueur=" + joueurID + '}';
+        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", score=" + score + ", type=" + type + ", commentaire=" + commentaire + ", tournoi=" + tournoi + ", equipe=" + equipe + ", joueur=" + joueur + '}';
     }
     
     

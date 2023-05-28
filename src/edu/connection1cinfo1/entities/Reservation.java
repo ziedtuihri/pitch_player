@@ -10,34 +10,20 @@ import java.sql.Date;
 
 /**
  *
- * @author ZIED
+ * @author WIJDEN
  */
 public class Reservation {
     private int id;
     private Date date;
     private String statut;
-    private float montant;
-    private int joueurID; //Joueur can make one or more reservations based on the Terrain availability
-    private int terrainID; //Reservation belongs to a Terrain
+    private BigDecimal montant;
+    private Joueur joueur; //Joueur can make one or more reservations based on the Terrain availability
+    private Terrain terrain; //Reservation belongs to a Terrain
 
     public Reservation() {
     }
     
     //here insert a parametred constructor
-
-    public Reservation(int id, String statut, float montant) {
-        this.id = id;
-        this.statut = statut;
-        this.montant = montant;
-    }
-
-    public Reservation(Date date, String statut, float montant, int joueurID, int terrainID) {
-        this.date = date;
-        this.statut = statut;
-        this.montant = montant;
-        this.joueurID = joueurID;
-        this.terrainID = terrainID;
-    }
 
     public int getId() {
         return id;
@@ -51,16 +37,16 @@ public class Reservation {
         return statut;
     }
 
-    public float getMontant() {
+    public BigDecimal getMontant() {
         return montant;
     }
 
-    public int getJoueurID() {
-        return joueurID;
+    public Joueur getJoueur() {
+        return joueur;
     }
 
-    public int getTerrainID() {
-        return terrainID;
+    public Terrain getTerrain() {
+        return terrain;
     }
 
     public void setId(int id) {
@@ -75,21 +61,21 @@ public class Reservation {
         this.statut = statut;
     }
 
-    public void setMontant(float montant) {
+    public void setMontant(BigDecimal montant) {
         this.montant = montant;
     }
 
-    public void setJoueurID(int joueurID) {
-        this.joueurID = joueurID;
+    public void setJoueur(Joueur joueur) {
+        this.joueur = joueur;
     }
 
-    public void setTerrainID(int terrainID) {
-        this.terrainID = terrainID;
+    public void setTerrain(Terrain terrain) {
+        this.terrain = terrain;
     }
 
     @Override
     public String toString() {
-        return "Reservation{" + "id=" + id + ", date=" + date + ", statut=" + statut + ", montant=" + montant + ", joueur=" + joueurID + ", terrain=" + terrainID + '}';
+        return "Reservation{" + "id=" + id + ", date=" + date + ", statut=" + statut + ", montant=" + montant + ", joueur=" + joueur + ", terrain=" + terrain + '}';
     }
     
     

@@ -7,7 +7,7 @@ package edu.connection1cinfo1.entities;
 
 /**
  *
- * @author ZIED
+ * @author WIJDEN
  */
 public class ProprietaireTerrain {
 
@@ -19,32 +19,7 @@ public class ProprietaireTerrain {
     private String adresse;
     private String telephone;
     private String informationsTerrain;
-    private int terrainID; //this is the table which Prop is related to  Terrain has 1 Owner
-
-    public ProprietaireTerrain(int id, String nom, String prenom) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-    }
-
-    public ProprietaireTerrain(String nom, String prenom, String email, String password, String adresse, String telephone, String informationsTerrain, int terrainID) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.password = password;
-        this.adresse = adresse;
-        this.telephone = telephone;
-        this.informationsTerrain = informationsTerrain;
-        this.terrainID = terrainID;
-    }
-
-    public void setTerrainID(int terrainID) {
-        this.terrainID = terrainID;
-    }
-
-    public int getTerrainID() {
-        return terrainID;
-    }
+    private Terrain terrain; //this is the table which Prop is related to  Terrain has 1 Owner
 
     public ProprietaireTerrain() {
     }
@@ -83,6 +58,9 @@ public class ProprietaireTerrain {
         return informationsTerrain;
     }
 
+    public Terrain getTerrain() {
+        return terrain;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -116,10 +94,13 @@ public class ProprietaireTerrain {
         this.informationsTerrain = informationsTerrain;
     }
 
+    public void setTerrain(Terrain terrain) {
+        this.terrain = terrain;
+    }
 
     @Override
     public String toString() {
-        return "ProprietaireTerrain{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", adresse=" + adresse + ", telephone=" + telephone + ", informationsTerrain=" + informationsTerrain + ", terrain=" + terrainID + '}';
+        return "ProprietaireTerrain{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", adresse=" + adresse + ", telephone=" + telephone + ", informationsTerrain=" + informationsTerrain + ", terrain=" + terrain + '}';
     }
 
 }

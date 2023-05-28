@@ -24,16 +24,16 @@ public class EquipeCRUD implements ICRUD<Equipe>{
     @Override
     public void addEntity(Equipe t) {
         try{
-        String request = "INSERT INTO equipe(nom_equipe, annee_fondation) VALUES"+"(?,?)";
-            
+            String request = "INSERT INTO equipe(nom_equipe, annee_fondation) VALUES"+"(?,?)";
+
             PreparedStatement pst =MyConnection.getInstance().getCnx()
-                               .prepareStatement(request);
-            
+                    .prepareStatement(request);
+
             pst.setString(1, t.getNom());
             pst.setInt(2, t.getAnneeFondation());
             pst.executeUpdate();  //to modify sth in the table type retour int nbr ligne executed
             System.out.println("Equipe ajoute facon prepared statement");
-            
+
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -60,7 +60,7 @@ public class EquipeCRUD implements ICRUD<Equipe>{
             System.out.println(ex.getMessage());
             ex.printStackTrace();
         }
-    return myList;
+        return myList;
     }
 
     @Override
@@ -101,5 +101,5 @@ public class EquipeCRUD implements ICRUD<Equipe>{
             ex.printStackTrace();
         }
     }
-    
+
 }
