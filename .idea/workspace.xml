@@ -5,34 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ffd90c-d230-41fb-afb7-16d1626954b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutJoueurFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Match.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Match.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/ProprietaireTerrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/ProprietaireTerrain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reclamation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Terrain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Tournoi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Tournoi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/interfaces/ICRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/interfaces/ICRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/AdminCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/AdminCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/EquipeCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/EquipeCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/JoueurCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/JoueurCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/MatchCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/MatchCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReclamationCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReclamationCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReservationCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReservationCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TerrainCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TerrainCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TournoiCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TournoiCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/PitchPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/PitchPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pitch_player.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch_player.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutEquipeFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +86,7 @@
       <workItem from="1685315189365" duration="1854000" />
       <workItem from="1685317210278" duration="982000" />
       <workItem from="1685393097461" duration="705000" />
-      <workItem from="1685393821412" duration="1495000" />
+      <workItem from="1685393821412" duration="2354000" />
     </task>
     <servers />
   </component>

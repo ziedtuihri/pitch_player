@@ -68,15 +68,11 @@ public class AjoutEquipeFXMLController implements Initializable {
             return;
         }
 
-
         Equipe e = new Equipe(nomEquipe, Integer.parseInt(anneeFondation));
         EquipeCRUD equipeCRUD = new EquipeCRUD();
         equipeCRUD.addEntity(e);
         Alert a = new Alert(Alert.AlertType.INFORMATION,"Equipe added", ButtonType.OK);
         a.show();
-
-
-
 
     }
     
