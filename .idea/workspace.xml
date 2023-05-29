@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="18ffd90c-d230-41fb-afb7-16d1626954b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/AjoutJoueurFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" afterDir="false" />
@@ -26,55 +30,21 @@
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/config.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Equipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Joueur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Match.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/ProprietaireTerrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Reclamation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Terrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Tournoi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/interfaces/ICRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/AdminCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/EquipeCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/JoueurCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/MatchCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ReclamationCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ReservationCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/TerrainCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/TournoiCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/tests/PitchPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/utils/MyConnection.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pitch_player.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch_player.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/ProprietaireTerrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/ProprietaireTerrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Reclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Reclamation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Terrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Tournoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/entities/Tournoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/interfaces/ICRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/interfaces/ICRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/AdminCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/AdminCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/EquipeCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/EquipeCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/MatchCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/MatchCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ReclamationCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ReclamationCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ReservationCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/ReservationCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/TerrainCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/TerrainCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/TournoiCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/services/TournoiCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/PitchPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/PitchPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/utils/MyConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/utils/MyConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,14 +57,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "zied",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zied&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/j/mysql-connector-java-8.0.30.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="FXMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.connection1cinfo1.tests.FXMain" />
+      <module name="pitch_player" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.connection1cinfo1.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FXMain" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,6 +104,10 @@
       <updated>1685314670271</updated>
       <workItem from="1685314676337" duration="45000" />
       <workItem from="1685314874615" duration="301000" />
+      <workItem from="1685315189365" duration="1854000" />
+      <workItem from="1685317210278" duration="982000" />
+      <workItem from="1685393097461" duration="705000" />
+      <workItem from="1685393821412" duration="1495000" />
     </task>
     <servers />
   </component>
