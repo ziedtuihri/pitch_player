@@ -55,7 +55,7 @@ public class PitchPlayer {
         // joueurCRUD.addEntity(joueur);
         // joueurCRUD.update(joueurUpdate);
         // joueurCRUD.delete(joueurUpdate);
-        System.out.println(joueurCRUD.displayEntities());
+        System.out.println(joueurCRUD.displayEntities()+"\n"+joueurCRUD.meilleurJoueur());
 
 
 

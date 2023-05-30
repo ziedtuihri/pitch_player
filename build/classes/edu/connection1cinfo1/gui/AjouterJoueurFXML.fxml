@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.AjouterJoueurFXMLController">
+   <children>
+      <Label layoutX="109.0" layoutY="74.0" prefHeight="17.0" prefWidth="76.0" text="Nom" />
+      <Label layoutX="109.0" layoutY="119.0" prefHeight="17.0" prefWidth="76.0" text="Prenom" />
+      <Label layoutX="109.0" layoutY="160.0" prefHeight="17.0" prefWidth="76.0" text="Email" />
+      <Label layoutX="109.0" layoutY="200.0" prefHeight="17.0" prefWidth="95.0" text="date naissance" />
+      <Label layoutX="109.0" layoutY="244.0" prefHeight="17.0" prefWidth="76.0" text="Numero tele" />
+      <Label layoutX="109.0" layoutY="288.0" prefHeight="17.0" prefWidth="76.0" text="Equipe" />
+      <TextField fx:id="tfNomJoueur" layoutX="284.0" layoutY="70.0" />
+      <TextField fx:id="tfPrenomJoueur" layoutX="284.0" layoutY="115.0" />
+      <TextField fx:id="tfEmailJoueur" layoutX="284.0" layoutY="156.0" />
+      <TextField fx:id="tfNumeroTeleJoueur" layoutX="284.0" layoutY="240.0" />
+      <ChoiceBox fx:id="tfChoiceBoxJoueur" layoutX="284.0" layoutY="284.0" prefWidth="150.0" />
+      <Button layoutX="281.0" layoutY="363.0" mnemonicParsing="false" onAction="#AjouterJoueur" prefHeight="32.0" prefWidth="76.0" text="Ajout" />
+      <Label fx:id="stMessage" layoutX="284.0" layoutY="334.0" prefHeight="17.0" prefWidth="279.0" />
+      <DatePicker fx:id="tfDateJoueur" layoutX="284.0" layoutY="196.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>

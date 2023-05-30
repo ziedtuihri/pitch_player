@@ -6,6 +6,7 @@
 package edu.connection1cinfo1.entities;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -26,6 +27,15 @@ public class Joueur {
     private int poids;
     private int experienceJeu;
     private int nbrButs;
+
+    public Joueur(String nom, String prenom, String email, Date dateNaissance, String numeroTelephone, int idequipe) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.dateNaissance = dateNaissance;
+        this.numeroTelephone = numeroTelephone;
+        Idequipe = idequipe;
+    }
 
     @Override
     public String toString() {

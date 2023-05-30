@@ -115,4 +115,29 @@ public class JoueurCRUD implements ICRUD<Joueur>{
             ex.printStackTrace();
         }
     }
+
+    public List<Joueur> meilleurJoueur(){
+        List<Joueur> myList = new ArrayList<>();
+        try{
+            String requet = "SELECT nbr_buts,id_joueur,nom_joueur,prenom_joueur,email_joueur FROM `joueur` order by nbr_buts DESC LIMIT 1;";
+            Statement st = MyConnection
+                    .getInstance()
+                    .getCnx()
+                    .createStatement();
+            ResultSet rs = st.executeQuery(requet);
+
+            while(rs.next()){
+                Joueur p = new Joueur();
+                p.setId(rs.getInt(1));
+                p.setNom(rs.getString("nom_joueur"));
+                p.setPrenom(rs.getString("prenom_joueur"));
+                p.setEmail(rs.getString("email_joueur"));
+                myList.add(p);
+            }
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
+        return myList;
+    }
 }
