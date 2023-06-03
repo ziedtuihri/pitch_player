@@ -86,4 +86,37 @@ public class Terrain {
         return "Terrain{" + "id=" + id + ", nom=" + nom + ", adresse=" + adresse + ", ville=" + ville + ", dimensions=" + dimensions + ", equipements=" + equipements + ", disponibilite=" + disponibilite + '}';
     }
 
+    public Terrain(int id, String nom, String adresse, String ville, String dimensions, String equipements, String disponibilite) {
+        this.id = id;
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.dimensions = dimensions;
+        this.equipements = equipements;
+        this.disponibilite = disponibilite;
+    }
+
+    public Terrain(String nom, String adresse, String ville, String dimensions, String equipements, String disponibilite) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.dimensions = dimensions;
+        this.equipements = equipements;
+        this.disponibilite = disponibilite;
+    }
+public Terrain(String ville, int id) {
+        this.ville = ville;
+        this.id = id;
+    }
+
+    public Terrain(int id) {
+        this.id = id;
+    }
+
+    public Terrain(String nom, String adresse) {
+        this.nom = nom;
+        this.adresse = adresse;
+    }
+
+
 }
