@@ -5,37 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ffd90c-d230-41fb-afb7-16d1626954b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Equipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Joueur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Match.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/ProprietaireTerrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Reclamation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Terrain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/entities/Tournoi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjouterJoueurFXMLController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/AjouterJoueurFXMLController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/interfaces/ICRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/AdminCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/EquipeCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/JoueurCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/MatchCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ReclamationCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/ReservationCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/TerrainCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/services/TournoiCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/tests/FXMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/tests/PitchPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/utils/MyConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "zied",
-    "last_opened_file_path": "C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/j/mysql-connector-java-8.0.30.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zied&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/j/mysql-connector-java-8.0.30.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.FXMain">
     <configuration name="FXMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.connection1cinfo1.tests.FXMain" />
@@ -137,6 +111,8 @@
       <workItem from="1685879445495" duration="107000" />
       <workItem from="1685879645920" duration="281000" />
       <workItem from="1685880057698" duration="357000" />
+      <workItem from="1685886836886" duration="267000" />
+      <workItem from="1685887211249" duration="2378000" />
     </task>
     <servers />
   </component>

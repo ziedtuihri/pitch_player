@@ -35,8 +35,8 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="idUsername" layoutX="121.0" layoutY="175.0" promptText="Username" />
-            <Button layoutX="111.0" layoutY="285.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="64.0" style="-fx-background-color: #42ab80;" text="Login" textFill="WHITE">
+            <TextField fx:id="idUsername" layoutX="110.0" layoutY="175.0" promptText="Username" />
+            <Button layoutX="109.0" layoutY="269.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="64.0" style="-fx-background-color: #42ab80;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -51,7 +51,13 @@
                   <Image url="@../../../img/login_page.png" />
                </image>
             </ImageView>
-            <PasswordField fx:id="idPassword" layoutX="121.0" layoutY="221.0" promptText="Password" />
+            <PasswordField fx:id="idPassword" layoutX="110.0" layoutY="221.0" promptText="Password" />
+            <Button layoutX="185.0" layoutY="269.0" mnemonicParsing="false" onAction="#signUP" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #42ab80;" text="Sign UP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text fx:id="idForgotPass" fill="#1e8eff" layoutX="26.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot your password?" wrappingWidth="242.59893798828125" />
          </children>
       </AnchorPane>
    </right>
