@@ -3,15 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/interfaces/ICRUD.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/entities/Equipe.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/services/JoueurCRUD.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/entities/Admin.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/utils/MyConnection.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/entities/Joueur.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/services/EquipeCRUD.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/tests/PitchPlayer.java</file>
-            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/entities/Match.java</file>
+            <file>file:/C:/Users/ztouahri2/OneDrive%20-%20DXC%20Production/Desktop/pitch_player/src/edu/connection1cinfo1/gui/LoginFXML.fxml</file>
         </group>
     </open-files>
 </project-private>
