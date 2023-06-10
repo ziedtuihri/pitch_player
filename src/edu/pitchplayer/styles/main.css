@@ -1,0 +1,40 @@
+/* main.css */
+.label {
+    -fx-text-fill: green;
+}
+
+.text-field {
+    -fx-background-color: black;
+    -fx-text-fill: grey;
+}
+
+.button {
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+}
+
+.suggestions-box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+.suggestion {
+    -fx-padding: 5px;
+}
+.suggestions-box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+.suggestion {
+    -fx-padding: 5px;
+}
+.suggestions-list {
+    -fx-background-color: lightblue;
+    -fx-text-fill: white;
+    /* other style properties */
+}
