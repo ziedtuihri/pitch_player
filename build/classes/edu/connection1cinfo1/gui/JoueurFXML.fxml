@@ -1,11 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
-    
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
+   <children>
+      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="245.0" fitWidth="235.0" layoutY="-3.0">
+                     <image>
+                        <Image url="@../../../img/Player_Card.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="109.0" fitWidth="163.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="79.0" fitWidth="185.0" layoutX="26.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="258.0" prefWidth="250.0" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="34.0">
+                           <image>
+                              <Image url="@../../../img/addd.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Ajouté équipe" wrappingWidth="185.13671875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                     <children>
+                        <ImageView fitHeight="23.0" fitWidth="30.0">
+                           <image>
+                              <Image url="@../../../img/Search33.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Recherche équipe" wrappingWidth="185.13671875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="33.0">
+                           <image>
+                              <Image url="@../../../img/update.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  modifié profile" wrappingWidth="185.13671875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="35.0">
+                           <image>
+                              <Image url="@../../../img/football-31%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Match" wrappingWidth="185.13671875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="235.0" prefHeight="507.0" prefWidth="447.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="42.0">
+                     <image>
+                        <Image url="@../../../img/return_wiht.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Player details" wrappingWidth="385.47003173828125">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="447.0">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  Name" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  Prenom" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="37.0" prefHeight="54.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Email" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  role" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="91.0" prefHeight="54.0" prefWidth="447.0">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  username" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  phone" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="145.0" prefHeight="54.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  equipe" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  height" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="199.0" prefHeight="54.0" prefWidth="447.0">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  weight" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                     <children>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  scores" wrappingWidth="216.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="222.8033447265625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="253.0" prefHeight="54.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+               <children>
+                  <VBox prefHeight="54.0" prefWidth="447.0" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Adresse" wrappingWidth="443.47003173828125">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  ....." wrappingWidth="440.13665771484375">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

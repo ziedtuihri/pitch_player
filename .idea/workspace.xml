@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ffd90c-d230-41fb-afb7-16d1626954b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/JoueurFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/JoueurFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +46,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;zied&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/j/mysql-connector-java-8.0.30.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/pitch_player&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -113,6 +120,11 @@
       <workItem from="1685880057698" duration="357000" />
       <workItem from="1685886836886" duration="267000" />
       <workItem from="1685887211249" duration="2378000" />
+      <workItem from="1685892293257" duration="74000" />
+      <workItem from="1685898386754" duration="1998000" />
+      <workItem from="1686149348395" duration="504000" />
+      <workItem from="1686176030609" duration="732000" />
+      <workItem from="1686316105608" duration="336000" />
     </task>
     <servers />
   </component>

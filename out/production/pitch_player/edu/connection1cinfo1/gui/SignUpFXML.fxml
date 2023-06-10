@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.LoginFXMLController">
+   <left>
+      <AnchorPane prefHeight="518.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-3.0" layoutY="-2.0" prefHeight="514.0" prefWidth="188.0">
+               <children>
+                  <ImageView fitHeight="127.0" fitWidth="276.0">
+                     <image>
+                        <Image url="@../../../img/Betway_SignUP_22.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="120.0" fitWidth="276.0">
+                     <image>
+                        <Image url="@../../../img/istockphoto-471340302-612x612.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="126.0" fitWidth="276.0">
+                     <image>
+                        <Image url="@../../../img/360_F_557079131_WBP5YfclkWu7thu0hu6gAbmXfbjj5Lt7.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="139.0" fitWidth="276.0">
+                     <image>
+                        <Image url="@../../../img/football-soccer-player-man-action-260nw-2112110414.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="507.0" prefWidth="407.0" style="-fx-background-image: ..\..\..\img\Betway_Sign_Up_Offer (1)22.jpg;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="idMessage" fill="#d41111" layoutX="66.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="134.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="idSignUp" layoutX="21.0" layoutY="454.0" mnemonicParsing="false" onAction="#signUp" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #42ab80;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="84.0" fitWidth="82.0" layoutX="159.0" layoutY="26.0">
+               <image>
+                  <Image url="@../../../img/8153536-ai%20(1)%20(2).png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="19.0" layoutY="163.0" prefHeight="200.0" prefWidth="362.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="37.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Email" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idUsername1" promptText="Email" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Password" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="idPassword" promptText="Password" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Nom" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idUsername2" promptText="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="38.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Prenom" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idUsername3" promptText="Prenom" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Telephone" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idUsername4" promptText="Telephone" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="38.0" prefWidth="362.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="81.0" text="Username" textFill="#42ab80">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idUsername" promptText="Username" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

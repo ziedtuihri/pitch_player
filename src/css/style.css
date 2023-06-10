@@ -1,0 +1,21 @@
+.text-style {
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: teal;
+    -fx-font-weight: bold;
+}
+
+.button-style {
+    -fx-background-color: #42ab80;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-padding: 10px 10px;
+}
+
+.button-style:hover {
+    -fx-background-color: #42ab80;
+}
+
+.button-style:pressed {
+    -fx-background-color: #42ab80;
+}
