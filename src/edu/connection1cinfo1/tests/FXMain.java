@@ -27,19 +27,20 @@ public class FXMain extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        
-        String url = "../gui/SignUpFXML.fxml";
+
+        String url = "../gui/LoginFXML.fxml";
         URL realUrl = getClass().getResource(url);
-        
         FXMLLoader loader = new FXMLLoader(realUrl);
-        
-        Parent root;        
+
+        Parent root;
         try {
             root = loader.load();
-                    Scene sc = new Scene(root);
+        Scene sc = new Scene(root);
+        
         primaryStage.setScene(sc);
         primaryStage.show();
-        primaryStage.setTitle("gestion utilisateur");
+        primaryStage.setTitle("Login");
+
         } catch (IOException ex) {
             Logger.getLogger(FXMain.class.getName()).log(Level.SEVERE, null, ex);
         }

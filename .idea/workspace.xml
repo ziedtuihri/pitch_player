@@ -5,17 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ffd90c-d230-41fb-afb7-16d1626954b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Equipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Joueur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Match.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Match.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/ProprietaireTerrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/ProprietaireTerrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reclamation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Terrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Tournoi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/entities/Tournoi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjoutEquipeFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjouterJoueurFXMLController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjouterJoueurFXMLController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjouterJoueurFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/AjouterJoueurFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/JoueurFXMLController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/LoginFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/SignUpFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/SignUpFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/SignUpFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/gui/SignUpFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/interfaces/ICRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/interfaces/ICRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/AdminCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/AdminCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/EquipeCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/EquipeCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/FileOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/FileOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/JoueurCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/JoueurCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/MatchCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/MatchCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ProprietaireTerrainCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReclamationCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReclamationCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReservationCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/ReservationCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TerrainCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TerrainCRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TournoiCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/services/TournoiCRUD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/FXMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/PitchPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/tests/PitchPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/connection1cinfo1/utils/MyConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/JoueurFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/JoueurFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/SignUpFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pitch_player/edu/connection1cinfo1/gui/SignUpFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch_player.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch_player.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/LoginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/SignUpFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/SignUpFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/SignUpFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/gui/SignUpFXMLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/connection1cinfo1/tests/FXMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +66,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
   <component name="ProjectId" id="2QRRzCDcJhR4cpJ4Gebh9ijTn0v" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,7 +86,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;zied&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/pitch_player&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ztouahri2/OneDrive - DXC Production/Desktop/j/controlsfx-8.40.11.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,7 +95,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -125,6 +165,15 @@
       <workItem from="1686149348395" duration="504000" />
       <workItem from="1686176030609" duration="732000" />
       <workItem from="1686316105608" duration="336000" />
+      <workItem from="1686456136254" duration="311000" />
+      <workItem from="1686456470236" duration="175000" />
+      <workItem from="1686456654727" duration="608000" />
+      <workItem from="1686457945368" duration="2010000" />
+      <workItem from="1686464097990" duration="8847000" />
+      <workItem from="1686477122258" duration="641000" />
+      <workItem from="1686495752432" duration="1013000" />
+      <workItem from="1686503786110" duration="4769000" />
+      <workItem from="1686588011656" duration="989000" />
     </task>
     <servers />
   </component>
