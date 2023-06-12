@@ -1,7 +1,6 @@
 .text-style {
     -fx-font-size: 13px;
     -fx-font-family: "Arial";
-    -fx-text-fill: teal;
     -fx-font-weight: bold;
 }
 
@@ -18,4 +17,39 @@
 
 .button-style:pressed {
     -fx-background-color: #42ab80;
+}
+
+.button-design{
+    
+    -fx-background-color:linear-gradient(to bottom right,  #056063, #42ab80);
+    -fx-background-radius:20px;
+    -fx-min-width: 80px;
+    -fx-min-height: 30px;
+    -fx-cursor:hand;
+    
+}
+
+.button-design:hover{
+    -fx-background-color:linear-gradient(to bottom left,  #42ab80, #42ab80); 
+}
+
+.textfield-design{
+    -fx-background-color:transparent;
+    -fx-background-radius:10px;
+    -fx-border-color:linear-gradient(to bottom right, #056063, #42ab80);
+    -fx-border-radius:10px;
+    -fx-text-inner-color:#000;
+}
+
+.hypertext-design {
+    -fx-text-fill: #5185c5;
+    -fx-underline: false;
+    -fx-font-size: 12px;
+    -fx-font-family: "System";
+    -fx-font-style: normal; /* or "italic" */
+    -fx-border-color: transparent;
+}
+
+.hypertext-design:hover{
+    -fx-underline:true;
 }
