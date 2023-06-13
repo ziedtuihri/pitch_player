@@ -5,7 +5,7 @@
  */
 package edu.connection1cinfo1.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -16,14 +16,44 @@ public class Tournoi {
     private int id;
     private String nom;
     private int nbrParticipant;
-    private Date dateDebut;
-    private Date dateFin;
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
     private String lieu;
+    private User owner; //This is the table Tournoi, it can only be created by User(role=owner) and Tournoi can have many participating Equipe 
+
+    public Tournoi(int id, String nom, int nbrParticipant, LocalDate dateDebut, LocalDate dateFin, String lieu, User owner) {
+        this.id = id;
+        this.nom = nom;
+        this.nbrParticipant = nbrParticipant;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.lieu = lieu;
+        this.owner = owner;
+    }
 
     public Tournoi() {
     }
 
-    //generate constuctor with parameters here
+    public Tournoi(int id) {
+        this.id = id;
+    }
+
+    public Tournoi(int id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
+
+    public Tournoi(String nom, int nbrParticipant, LocalDate dateDebut, LocalDate dateFin, String lieu, User owner) {
+        this.nom = nom;
+        this.nbrParticipant = nbrParticipant;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.lieu = lieu;
+        this.owner = owner;
+    }
+
+    //Getters
+
     public int getId() {
         return id;
     }
@@ -36,17 +66,23 @@ public class Tournoi {
         return nbrParticipant;
     }
 
-    public Date getDateDebut() {
+    public LocalDate getDateDebut() {
         return dateDebut;
     }
 
-    public Date getDateFin() {
+    public LocalDate getDateFin() {
         return dateFin;
     }
 
     public String getLieu() {
         return lieu;
     }
+
+    public User getOwner() {
+        return owner;
+    }
+    
+    //Setters
 
     public void setId(int id) {
         this.id = id;
@@ -60,11 +96,11 @@ public class Tournoi {
         this.nbrParticipant = nbrParticipant;
     }
 
-    public void setDateDebut(Date dateDebut) {
+    public void setDateDebut(LocalDate dateDebut) {
         this.dateDebut = dateDebut;
     }
 
-    public void setDateFin(Date dateFin) {
+    public void setDateFin(LocalDate dateFin) {
         this.dateFin = dateFin;
     }
 
@@ -72,9 +108,14 @@ public class Tournoi {
         this.lieu = lieu;
     }
 
-    @Override
-    public String toString() {
-        return "Tournoi{" + "id=" + id + ", nom=" + nom + ", nbrParticipant=" + nbrParticipant + ", dateDebut=" + dateDebut + ", dateFin=" + dateFin + ", lieu=" + lieu + '}';
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
+    @Override
+    public String toString() {
+        return "Tournoi{" + "id=" + id + ", nom=" + nom + ", nbrParticipant=" + nbrParticipant + ", dateDebut=" + dateDebut + ", dateFin=" + dateFin + ", lieu=" + lieu + ", owner=" + owner + '}';
+    }
+    
+    
 }

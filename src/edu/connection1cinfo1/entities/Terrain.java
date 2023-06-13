@@ -15,15 +15,27 @@ public class Terrain {
     private String nom;
     private String adresse;
     private String ville;
-    private String dimensions;
-    private String equipements; //can be changed to a SET: Set<String> equipementsTerrain
-                               //because the equipments are a list of equipements we can work on it later
-    private String disponibilite;
+    private float longueur;
+    private float largeur;
+    private User owner; //Terrain belongs to one User(role=owner), but User(role=owner) can have 1 or many Terrain
+    //Terrain also will have relationship with the Match, since a Match will be held in a givn Terrain (1Match belongs to one Terrain, but Terrain can host many Match)
+    //User(role=joueur) can book a Terrain if it is available (disponibilite = true) 
+    //By default, the disponibilite is set to false, but when a reservation to a Terrain i made, it will be tru and Users can no longer book it in that given date
+    private boolean disponible;
+    //default value true, will be false if Terrain has a Reservation in the date User(role=joueur) wants to book it
 
     public Terrain() {
     }
-    
-    //generate constuctor with parameters here
+
+    public Terrain(String nom, String adresse, String ville, float longueur, float largeur, User owner, boolean disponible) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.longueur = longueur;
+        this.largeur = largeur;
+        this.owner = owner;
+        this.disponible = disponible;
+    }
 
     public int getId() {
         return id;
@@ -41,16 +53,20 @@ public class Terrain {
         return ville;
     }
 
-    public String getDimensions() {
-        return dimensions;
+    public float getLongueur() {
+        return longueur;
     }
 
-    public String getEquipements() {
-        return equipements;
+    public float getLargeur() {
+        return largeur;
     }
 
-    public String getDisponibilite() {
-        return disponibilite;
+    public User getOwner() {
+        return owner;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
     }
 
     public void setId(int id) {
@@ -69,21 +85,25 @@ public class Terrain {
         this.ville = ville;
     }
 
-    public void setDimensions(String dimensions) {
-        this.dimensions = dimensions;
+    public void setLongueur(float longueur) {
+        this.longueur = longueur;
     }
 
-    public void setEquipements(String equipements) {
-        this.equipements = equipements;
+    public void setLargeur(float largeur) {
+        this.largeur = largeur;
     }
 
-    public void setDisponibilite(String disponibilite) {
-        this.disponibilite = disponibilite;
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 
     @Override
     public String toString() {
-        return "Terrain{" + "id=" + id + ", nom=" + nom + ", adresse=" + adresse + ", ville=" + ville + ", dimensions=" + dimensions + ", equipements=" + equipements + ", disponibilite=" + disponibilite + '}';
+        return "Terrain{" + "id=" + id + ", nom=" + nom + ", adresse=" + adresse + ", ville=" + ville + ", longueur=" + longueur + ", largeur=" + largeur + ", owner=" + owner + ", disponible=" + disponible + '}';
     }
 
 }

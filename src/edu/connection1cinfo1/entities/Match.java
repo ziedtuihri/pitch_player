@@ -5,28 +5,43 @@
  */
 package edu.connection1cinfo1.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
  * @author WIJDEN
  */
 public class Match {
+
     private int id;
     private String nom;
-    private Date date;
+    private LocalDate date;
     private String statut;
-    private String score;
-    private String type;
-    private String commentaire;
-    private Tournoi tournoi; //Match can be part of a Tournoi
-    private Equipe equipe; //Match can be played by 1 or many Equipes
-    private Joueur joueur; //Match can be played by 1 or many Players if it doesn't belong to a Tournoi (match amical)
+    private String matchType; //Match can be a simple match or can be related to a tournoi
+    private String commentaireMatch; //Players can put comments on a Match
+    private Tournoi tournoi; //this is the Tournoi a Match belongs to if its matchType is related to a tournoi
+    //Relationship between them is Match belongs to 1 and only Tournoi, but Tournoi can have 1 or many Match
+    private User joueur; //This is the User of role joueur who will be creating the Match, he needs to make a reservation of a Terrain in order to create a Match
+    //Relationship is Match can have many joueurs (Users) and joueur can create one or many matches
+    private Terrain terrain; //This is the Terrain in which the Match will take place, Match can have 1 Terrain, but Terrain can host 1 or many Match
 
     public Match() {
     }
-    
-    //generate constructor with parameters here
+
+    public Match(int id) {
+        this.id = id;
+    }
+
+    public Match(String nom, LocalDate date, String statut, String matchType, String commentaireMatch, Tournoi tournoi, User joueur, Terrain terrain) {
+        this.nom = nom;
+        this.date = date;
+        this.statut = statut;
+        this.matchType = matchType;
+        this.commentaireMatch = commentaireMatch;
+        this.tournoi = tournoi;
+        this.joueur = joueur;
+        this.terrain = terrain;
+    }
 
     public int getId() {
         return id;
@@ -36,7 +51,7 @@ public class Match {
         return nom;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
@@ -44,28 +59,24 @@ public class Match {
         return statut;
     }
 
-    public String getScore() {
-        return score;
+    public String getMatchType() {
+        return matchType;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public String getCommentaire() {
-        return commentaire;
+    public String getCommentaireMatch() {
+        return commentaireMatch;
     }
 
     public Tournoi getTournoi() {
         return tournoi;
     }
 
-    public Equipe getEquipe() {
-        return equipe;
+    public User getJoueur() {
+        return joueur;
     }
 
-    public Joueur getJoueur() {
-        return joueur;
+    public Terrain getTerrain() {
+        return terrain;
     }
 
     public void setId(int id) {
@@ -76,7 +87,7 @@ public class Match {
         this.nom = nom;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -84,36 +95,29 @@ public class Match {
         this.statut = statut;
     }
 
-    public void setScore(String score) {
-        this.score = score;
+    public void setMatchType(String matchType) {
+        this.matchType = matchType;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setCommentaire(String commentaire) {
-        this.commentaire = commentaire;
+    public void setCommentaireMatch(String commentaireMatch) {
+        this.commentaireMatch = commentaireMatch;
     }
 
     public void setTournoi(Tournoi tournoi) {
         this.tournoi = tournoi;
     }
 
-    public void setEquipe(Equipe equipe) {
-        this.equipe = equipe;
+    public void setJoueur(User joueur) {
+        this.joueur = joueur;
     }
 
-    public void setJoueur(Joueur joueur) {
-        this.joueur = joueur;
+    public void setTerrain(Terrain terrain) {
+        this.terrain = terrain;
     }
 
     @Override
     public String toString() {
-        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", score=" + score + ", type=" + type + ", commentaire=" + commentaire + ", tournoi=" + tournoi + ", equipe=" + equipe + ", joueur=" + joueur + '}';
+        return "Match{" + "id=" + id + ", nom=" + nom + ", date=" + date + ", statut=" + statut + ", matchType=" + matchType + ", commentaireMatch=" + commentaireMatch + ", tournoi=" + tournoi + ", joueur=" + joueur + ", terrain=" + terrain + '}';
     }
-    
-    
-    
-    
+
 }

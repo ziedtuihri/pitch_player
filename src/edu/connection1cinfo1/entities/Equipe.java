@@ -7,18 +7,15 @@ package edu.connection1cinfo1.entities;
 
 /**
  *
- * @author Zied
+ * @author WIJDEN
  */
 public class Equipe {
 
+    //The is the Equipe, it is formed by many User(role=joueur) but 1 joueur can be part of just 1 Equipe
     private int id;
     private String nom;
     private int anneeFondation;
 
-    public Equipe() {
-    }
-
-    // parametred constructor already inserted
     public Equipe(int id, String nom, int anneeFondation) {
         this.id = id;
         this.nom = nom;
@@ -30,6 +27,10 @@ public class Equipe {
         this.anneeFondation = anneeFondation;
     }
 
+    public Equipe() {
+    }
+
+    //Getters
     public int getId() {
         return id;
     }
@@ -42,6 +43,7 @@ public class Equipe {
         return anneeFondation;
     }
 
+    //Setters
     public void setId(int id) {
         this.id = id;
     }
