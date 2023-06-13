@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * @author LENOVO
  */
 public class MyConnection {
-    private String url="jdbc:mysql://localhost:3306/pitch_player";
+    private String url="jdbc:mysql://localhost:3306/pitch";
     private String login="root";
     private String pwd="";
     Connection cnx;

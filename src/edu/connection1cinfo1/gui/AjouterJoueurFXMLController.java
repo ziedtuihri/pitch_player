@@ -5,7 +5,6 @@
 package edu.connection1cinfo1.gui;
 
 import edu.connection1cinfo1.entities.Equipe;
-import edu.connection1cinfo1.entities.Joueur;
 import edu.connection1cinfo1.services.EquipeCRUD;
 import java.net.URL;
 import java.sql.Date;
@@ -14,7 +13,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import edu.connection1cinfo1.services.JoueurCRUD;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -123,14 +121,17 @@ public class AjouterJoueurFXMLController implements Initializable {
         Date sqlDate = Date.valueOf(dateJoueur);
 
         System.out.println("date:: " + dateJoueur+"\n select "+cb.getValue().getId());
-
+        /*
         Joueur j = new Joueur(nomJoueur, prenomJoueur, emailJoueur,
                 sqlDate,
                 numTeleJoueur,
                 cb.getValue().getId()
                 );
         JoueurCRUD joueurCRUD = new JoueurCRUD();
+
+       
         joueurCRUD.addEntity(j);
+        */
         Alert a = new Alert(Alert.AlertType.INFORMATION,"Joueur added", ButtonType.OK);
         a.show();
 

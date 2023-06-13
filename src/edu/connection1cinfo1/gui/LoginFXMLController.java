@@ -4,8 +4,8 @@
  */
 package edu.connection1cinfo1.gui;
 
-import edu.connection1cinfo1.entities.Joueur;
-import edu.connection1cinfo1.services.FileOperations;
+
+import edu.connection1cinfo1.services.UserCRUD;
 import edu.connection1cinfo1.tests.FXMain;
 import edu.connection1cinfo1.utils.MyConnection;
 import java.net.URL;
@@ -35,8 +35,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
+import org.mindrot.jbcrypt.BCrypt;
 /**
  * FXML Controller class
  *
@@ -55,7 +59,7 @@ public class LoginFXMLController implements Initializable {
     @FXML
     private Button idSignUp;
     @FXML
-    private Text idForgotPass;
+    private Hyperlink idForgotPass;
 
     /**
      * Initializes the controller class.
@@ -71,21 +75,36 @@ public class LoginFXMLController implements Initializable {
 
 
     @FXML
-    private void login(ActionEvent event) {
+    private void login(ActionEvent event) throws IOException {
         String username = idUsername.getText().trim();
         String password = idPassword.getText().trim();
-                String requet = "SELECT pwd FROM user WHERE username = " +username;
-        try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requet)) {
-
-            ResultSet rs = pst.executeQuery();
-        if (rs.next()) {
-
-            //System.out.println("Joueur modifié");
+        String hashedPassword;
+        UserCRUD userCRUD = new UserCRUD();
+        
+        if (username.isEmpty() || username.length() < 2) {
+            alertFN("Be carful", "Invalid username !!!");
+            return;
         }
-        } catch(SQLException ex) {
-            System.out.println(ex.getMessage());
-            ex.printStackTrace();
+
+        if (password.isEmpty() || password.length() < 2) {
+            alertFN("Be carful", "Invalid password !!!");
+            return;
         }
+        hashedPassword = userCRUD.checkAccountExists(username, username);
+        
+        if(hashedPassword == "null") {
+            alertFN("Be carful", "Invalid Account !!!");
+        }else
+        if (BCrypt.checkpw(password, hashedPassword)) {
+                   Parent signUpRoot = FXMLLoader.load(getClass().getResource("JoueurFXML.fxml"));
+                    Scene signUpScene = new Scene(signUpRoot);
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(signUpScene);
+                    stage.setTitle("Sign Up");
+                    stage.show();
+            } else {
+               alertFN("Be carful", "Invalid username or password !!!");
+            }
     }
 
     @FXML
@@ -96,5 +115,14 @@ public class LoginFXMLController implements Initializable {
         stage.setScene(signUpScene);
         stage.setTitle("Sign Up");
         stage.show();
+    }
+    
+    public void alertFN(String msg1, String msg2) {
+         Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information");
+                alert.setHeaderText(msg1);//msg1
+                alert.setContentText(msg2);//msg2
+
+                alert.showAndWait();
     }
 }

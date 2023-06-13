@@ -224,4 +224,87 @@ public class UserCRUD implements ICRUD<User> {
         }
     }
 
+
+    public static boolean checkUsernameExists(String username) {
+        try {
+            String query = "SELECT COUNT(*) FROM `user` WHERE username = ?";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setString(1, username);
+            ResultSet rs = pst.executeQuery();
+            rs.next();
+            int count = rs.getInt(1);
+            rs.close();
+            pst.close();
+            return count > 0;
+        } catch (SQLException ex) {
+            System.out.println("Error checking username existence: " + ex.getMessage());
+            return false;
+        }
+    }
+    
+        public static String checkAccountExists(String email, String username) {
+        try {
+            
+            String hashedPassword = "null";
+            String query = "SELECT pwd FROM `user` WHERE (email = ? OR username = ?)";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setString(1, email);
+            pst.setString(2, username);
+            ResultSet rs = pst.executeQuery();
+            if(rs.next()){
+              hashedPassword  = rs.getString("pwd");   
+            }
+            System.out.println("hashed Password: " +hashedPassword);
+            rs.close();
+            pst.close();
+            return hashedPassword;
+            
+        } catch (SQLException ex) {
+            System.out.println("Error checking Account existence: " + ex.getMessage());
+            return "null";
+        }
+    }
+        
+        public static boolean checkEmailExists(String email) {
+        try {
+            String query = "SELECT COUNT(*) FROM `user` WHERE email = ?";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setString(1, email);
+            ResultSet rs = pst.executeQuery();
+            rs.next();
+            int count = rs.getInt(1);
+            rs.close();
+            pst.close();
+            return count > 0;
+        } catch (SQLException ex) {
+            System.out.println("Error checking email existence: " + ex.getMessage());
+            return false;
+        }
+    }
+
+    public boolean addEntitySignUp(User user) {
+
+        try {
+            String query = "INSERT INTO User "
+                    + "(username, nom, prenom, email, pwd, adresse, role) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+
+            pst.setString(1, user.getUsername());
+            pst.setString(2, user.getNom());
+            pst.setString(3, user.getPrenom());
+            pst.setString(4, user.getEmail());
+            pst.setString(5, user.getPwd());
+            pst.setString(6, user.getAdresse());
+            pst.setString(7, user.getPhone());
+
+            pst.executeUpdate();
+            System.out.println("User added successfully.");
+            return true;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
+    }
+
 }

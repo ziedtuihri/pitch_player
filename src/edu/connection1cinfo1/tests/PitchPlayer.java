@@ -32,7 +32,8 @@ public class PitchPlayer {
 
 
         Equipe equipe = new Equipe(7, "equipe5", 1999);
-
+        
+        /*
         Joueur joueur = new Joueur(
                 "zied3355", "th3355", "email@gmail.com",
                 "12345", sqlDate, "00000000006",
@@ -57,7 +58,7 @@ public class PitchPlayer {
         // joueurCRUD.delete(joueurUpdate);
         System.out.println(joueurCRUD.displayEntities()+"\n"+joueurCRUD.meilleurJoueur());
 
-
+        */
 
     }
 

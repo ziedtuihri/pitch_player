@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -14,9 +14,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.LoginFXMLController">
    <left>
-      <AnchorPane prefHeight="507.0" prefWidth="369.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="547.0" prefWidth="308.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="507.0" fitWidth="407.0">
+            <ImageView fitHeight="507.0" fitWidth="308.0">
                <image>
                   <Image url="@../../../img/logo.png" />
                </image>
@@ -24,7 +24,7 @@
          </children></AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="507.0" prefWidth="275.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="507.0" prefWidth="427.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="25.0" layoutY="175.0" prefHeight="16.0" prefWidth="81.0" text="Username" textFill="#42ab80">
                <font>
@@ -36,37 +36,29 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="idUsername" layoutX="110.0" layoutY="175.0" promptText="Username" />
-            <Button fx:id="idLogin" layoutX="99.0" layoutY="269.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="68.0" style="-fx-background-color: #42ab80;" stylesheets="@../../../css/style.css" text="Login" textFill="WHITE">
+            <TextField fx:id="idUsername" layoutX="110.0" layoutY="175.0" prefHeight="27.0" prefWidth="172.0" promptText="Username" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
+            <Button fx:id="idLogin" layoutX="112.0" layoutY="300.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="68.0" styleClass="button-design" stylesheets="@../../../css/style.css" text="SignIn" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
-               <styleClass>
-                  <String fx:value="button-style" />
-                  <String fx:value="text-style" />
-               </styleClass>
             </Button>
             <Text fx:id="idMessage" fill="#d41111" layoutX="66.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="134.13671875">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Text>
-            <ImageView fitHeight="84.0" fitWidth="75.0" layoutX="109.0" layoutY="29.0">
+            <ImageView fitHeight="84.0" fitWidth="75.0" layoutX="149.0" layoutY="29.0">
                <image>
                   <Image url="@../../../img/login_page.png" />
                </image>
             </ImageView>
-            <PasswordField fx:id="idPassword" layoutX="110.0" layoutY="221.0" promptText="Password" />
-            <Button fx:id="idSignUp" layoutX="179.0" layoutY="269.0" mnemonicParsing="false" onAction="#signUp" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #42ab80;" stylesheets="@../../../css/style.css" text="Sign Up" textFill="WHITE">
+            <PasswordField fx:id="idPassword" layoutX="110.0" layoutY="221.0" prefHeight="27.0" prefWidth="173.0" promptText="Password" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
+            <Button fx:id="idSignUp" layoutX="205.0" layoutY="300.0" mnemonicParsing="false" onAction="#signUp" prefHeight="36.0" prefWidth="78.0" styleClass="button-design" stylesheets="@../../../css/style.css" text="SignUp" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
-               <styleClass>
-                  <String fx:value="button-style" />
-                  <String fx:value="text-style" />
-               </styleClass>
             </Button>
-            <Text fx:id="idForgotPass" fill="#1e8eff" layoutX="26.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot your password?" wrappingWidth="242.59893798828125" />
+            <Hyperlink fx:id="idForgotPass" layoutX="14.0" layoutY="381.0" prefHeight="23.0" prefWidth="130.0" text="Forgot password?" />
          </children>
       </AnchorPane>
    </right>
