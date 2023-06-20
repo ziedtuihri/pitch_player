@@ -75,7 +75,7 @@ public class SignUpFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-            Parent signUpRoot = null;
+        Parent signUpRoot = null;
         try {
             signUpRoot = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
         } catch (IOException ex) {
@@ -169,17 +169,17 @@ public class SignUpFXMLController implements Initializable {
         String adress = idAdresse.getText();
         String password = idPassword.getText();
 
-        if (nom.isEmpty() && nom.length() > 2) {
+        if (nom.isEmpty() && nom.length() < 2) {
             stMessage.setText("Please correct First name");
             return;
         }
 
-        if (prenom.isEmpty() && prenom.length() > 2) {
+        if (prenom.isEmpty() && prenom.length() < 2) {
             stMessage.setText("Please correct Last name.");
             return;
         }
 
-        if (email.isEmpty() && email.contains("@") && email.contains(".")) {
+        if (email.isEmpty()) {
             stMessage.setText("Please input email");
             return;
         }

@@ -281,6 +281,26 @@ public class UserCRUD implements ICRUD<User> {
             return false;
         }
     }
+        
+    public static String getEmailWithUsername(String username) {
+        try {
+            String emailWithUsername = "null";
+            String query = "SELECT email FROM `user` WHERE username = ?";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setString(1, username);
+            ResultSet rs = pst.executeQuery();
+             if(rs.next()){
+              emailWithUsername  = rs.getString("email");   
+            }
+            
+            rs.close();
+            pst.close();
+            return emailWithUsername;
+        } catch (SQLException ex) {
+            System.out.println("Error checking email existence: " + ex.getMessage());
+            return "null";
+        }
+    }
 
     public boolean addEntitySignUp(User user) {
 

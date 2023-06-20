@@ -70,6 +70,22 @@ public class LoginFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+                Parent signUpRoot = null;
+        try {
+            signUpRoot = FXMLLoader.load(getClass().getResource("VerificationFXML.fxml"));
+        } catch (IOException ex) {
+            Logger.getLogger(SignUpFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            Scene signUpScene = new Scene(signUpRoot);
+           // Set the action to be performed when the link is clicked
+        idForgotPass.setOnAction(e -> {
+
+            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            stage.setScene(signUpScene);
+            stage.setTitle("Forget Password");
+            stage.show();
+            System.out.println("Returning to Login page...");
+        });
         
     }    
 
