@@ -62,5 +62,18 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
+      <TextField fx:id="idPassword1" layoutX="368.0" layoutY="212.0" promptText="password" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
+      <TextField fx:id="idPassword2" layoutX="368.0" layoutY="289.0" promptText="password" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
+      <Button fx:id="idSaveUpdate" layoutX="361.0" layoutY="338.0" mnemonicParsing="false" onAction="#savePassword" stylesheets="@../../../css/style.css" text="Save">
+         <styleClass>
+            <String fx:value="button-design" />
+            <String fx:value="button-style" />
+         </styleClass>
+      </Button>
+      <Text fx:id="idMessagePassword" fill="#42ab80" layoutX="362.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write your new password" wrappingWidth="200.00000019930303">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

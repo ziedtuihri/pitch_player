@@ -68,6 +68,14 @@ public class VerificationFXMLController implements Initializable {
     private String email;
     @FXML
     private Button idSubmitEmail;
+    @FXML
+    private TextField idPassword1;
+    @FXML
+    private TextField idPassword2;
+    @FXML
+    private Button idSaveUpdate;
+    @FXML
+    private Text idMessagePassword;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -76,6 +84,10 @@ public class VerificationFXMLController implements Initializable {
         idPasswordUpdate2.setVisible(false);
         idUpdatePassword.setVisible(false);
         idMessageCode.setVisible(false);
+        idPassword1.setVisible(false);
+        idPassword2.setVisible(false);
+        idSaveUpdate.setVisible(false);
+        idMessagePassword.setVisible(false);
     }    
 
     @FXML
@@ -220,7 +232,19 @@ public class VerificationFXMLController implements Initializable {
     private void UpdatePassword(ActionEvent event) {
         String inputCode = idCode.getText().trim();
         if(code == Integer.valueOf(inputCode)){
-            System.out.println("sssssssssssssssssssssssssssssssssssssssssssssssss");
+            
+           idMessageCode.setVisible(false);
+           idUpdatePassword.setVisible(false);
+           idCode.setVisible(false);
+           
+           idMessagePassword.setVisible(true);
+           idPassword1.setVisible(true);
+           idPassword2.setVisible(true);
+           idSaveUpdate.setVisible(true);
+           
+           
+           
+   
         }else {
             alertFN("Wrong code ", "Try to generate another code or check your emails !!");
         }
@@ -233,5 +257,9 @@ public class VerificationFXMLController implements Initializable {
                 alert.setContentText(msg2);//msg2
 
                 alert.showAndWait();
+    }
+
+    @FXML
+    private void savePassword(ActionEvent event) {
     }
 }
