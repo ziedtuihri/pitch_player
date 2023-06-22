@@ -33,6 +33,14 @@ import java.util.ResourceBundle;
 
 import java.util.Properties;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Hyperlink;
+import javafx.stage.Stage;
 import javax.mail.internet.MimeBodyPart;
 
 
@@ -76,9 +84,29 @@ public class VerificationFXMLController implements Initializable {
     private Button idSaveUpdate;
     @FXML
     private Text idMessagePassword;
+    @FXML
+    private Hyperlink idRuternLogin;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        // private Scene previousScene;
+
+        idRuternLogin.setOnAction(e -> {
+        Parent signUpRoot = null;
+            try {
+                signUpRoot = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(VerificationFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        Scene signUpScene = new Scene(signUpRoot);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(signUpScene);
+        stage.setTitle("Sign Up");
+        stage.show();
+        });
+
+        
         idCode.setVisible(false);
         idPasswordUpdate1.setVisible(false);
         idPasswordUpdate2.setVisible(false);
@@ -88,6 +116,8 @@ public class VerificationFXMLController implements Initializable {
         idPassword2.setVisible(false);
         idSaveUpdate.setVisible(false);
         idMessagePassword.setVisible(false);
+        
+     
     }    
 
     @FXML

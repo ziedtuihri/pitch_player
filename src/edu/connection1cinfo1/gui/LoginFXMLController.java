@@ -70,7 +70,7 @@ public class LoginFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-                Parent signUpRoot = null;
+        Parent signUpRoot = null;
         try {
             signUpRoot = FXMLLoader.load(getClass().getResource("VerificationFXML.fxml"));
         } catch (IOException ex) {

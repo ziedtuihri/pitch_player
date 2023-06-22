@@ -84,7 +84,6 @@ public class SignUpFXMLController implements Initializable {
             Scene signUpScene = new Scene(signUpRoot);
            // Set the action to be performed when the link is clicked
         idRuternToLogin.setOnAction(e -> {
-
             Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
             stage.setScene(signUpScene);
             stage.setTitle("Login");
