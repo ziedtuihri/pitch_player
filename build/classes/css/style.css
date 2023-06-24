@@ -55,3 +55,18 @@
 .hypertext-design:hover{
     -fx-underline:true;
 }
+
+.mous-moved:hover{
+    -fx-background-color: #42ab80;
+}
+
+
+.textfield-design-update{
+    -fx-background-color:FFFFFF;
+    -fx-background-radius:15px;
+    -fx-border-color:linear-gradient(to bottom right, #056063, #42ab80);
+    -fx-border-radius:15px;
+    -fx-text-inner-color:#000;
+    -fx-pref-height: 30px; /* Add desired height */
+    -fx-pref-width: 150px; /* Add desired width */
+}

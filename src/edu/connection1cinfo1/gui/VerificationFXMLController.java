@@ -43,6 +43,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 import javax.mail.internet.MimeBodyPart;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * FXML Controller class
@@ -70,8 +72,8 @@ public class VerificationFXMLController implements Initializable {
      * Initializes the controller class.
      */
         // Generate a random number between 1000 and 5000
-        Random random = new Random();
-        private int code = random.nextInt(5000) + 1000;
+        private Random random = new Random();
+        private int code;
     
     private String email;
     @FXML
@@ -88,25 +90,21 @@ public class VerificationFXMLController implements Initializable {
     private Hyperlink idRuternLogin;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        
-        // private Scene previousScene;
-
+        generateCode();
         idRuternLogin.setOnAction(e -> {
-        Parent signUpRoot = null;
+        Parent root = null;
             try {
-                signUpRoot = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+                root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
             } catch (IOException ex) {
                 Logger.getLogger(VerificationFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        Scene signUpScene = new Scene(signUpRoot);
+        Scene signUpScene = new Scene(root);
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.setScene(signUpScene);
-        stage.setTitle("Sign Up");
+        stage.setTitle("Login");
         stage.show();
         });
 
-        
         idCode.setVisible(false);
         idPasswordUpdate1.setVisible(false);
         idPasswordUpdate2.setVisible(false);
@@ -117,8 +115,25 @@ public class VerificationFXMLController implements Initializable {
         idSaveUpdate.setVisible(false);
         idMessagePassword.setVisible(false);
         
-     
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                generateCode();
+                System.out.println("neww code "+getCode());
+            }
+        }, 0, 10 * 60 * 1000); 
     }    
+
+    private void generateCode() {
+        // Generate a random number between 1000 and 5000
+        code = random.nextInt(5000 - 1000 + 1) + 1000;
+        System.out.println("Generated code: " + code);
+    }
+
+    public int getCode() {
+        return code;
+    }
 
     @FXML
     private void SubmitCode(ActionEvent event) throws GeneralSecurityException, IOException, MessagingException {
@@ -179,7 +194,7 @@ public class VerificationFXMLController implements Initializable {
         "        <h2>Password Reset</h2>\n" +
         "        <p>Hello,</p>\n" +
         "        <p>We have received a request to reset your password. To proceed with the password reset, use the code below:</p>\n" +
-        "        <p><a class=\"button\" href=\"#\">" + code + "</a></p>\n" +
+        "        <p><a class=\"button\" href=\"#\">" + getCode() + "</a></p>\n" +
         "        <p>If you did not request a password reset, please ignore this email.</p>\n" +
         "        <p>Thank you,</p>\n" +
         "        <p>Your App Team</p>\n" +
@@ -271,10 +286,7 @@ public class VerificationFXMLController implements Initializable {
            idPassword1.setVisible(true);
            idPassword2.setVisible(true);
            idSaveUpdate.setVisible(true);
-           
-           
-           
-   
+
         }else {
             alertFN("Wrong code ", "Try to generate another code or check your emails !!");
         }
@@ -291,5 +303,6 @@ public class VerificationFXMLController implements Initializable {
 
     @FXML
     private void savePassword(ActionEvent event) {
+        
     }
 }

@@ -76,6 +76,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Hyperlink fx:id="idRuternLogin" layoutX="327.0" layoutY="430.0" prefHeight="23.0" prefWidth="184.0" styleClass="hypertext-design" stylesheets="@../../../css/style.css" text="Login your account?" />
+      <Hyperlink fx:id="idRuternLogin" layoutX="326.0" layoutY="398.0" prefHeight="23.0" prefWidth="184.0" styleClass="hypertext-design" stylesheets="@../../../css/style.css" text="Login your account?" />
    </children>
 </AnchorPane>

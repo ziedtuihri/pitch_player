@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurUpdateFXMLController">
+   <children>
+      <VBox prefHeight="536.0" prefWidth="308.0">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/Betway_SignUP_22.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/istockphoto-471340302-612x612.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/shooting-soccer-drill.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="151.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/360_F_557079131_WBP5YfclkWu7thu0hu6gAbmXfbjj5Lt7.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="308.0" prefHeight="40.0" prefWidth="387.0" style="-fx-background-color: #066164;">
+         <children>
+            <VBox fx:id="idRtnUpdate" prefHeight="40.0" prefWidth="55.0">
+               <children>
+                  <ImageView fx:id="idReturnUpdate" fitHeight="40.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../../../img/return_wiht.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="329.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Update details" wrappingWidth="311.47003173828125">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutX="308.0" layoutY="40.0" prefHeight="496.0" prefWidth="385.0">
+         <children>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  First name" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="199.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Last name" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #066164;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Phone" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Equipe" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Height" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Weight" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #066164;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Scores" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Adresse" wrappingWidth="180.91796875" />
+                        <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

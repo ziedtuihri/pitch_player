@@ -119,7 +119,7 @@ public class SignUpFXMLController implements Initializable {
             // 
             try {
                 Platform.runLater(() -> {
-                Image image3 = new Image("https://cdn.fifacm.com/content/media/imgs/fifa21/players/p213007.png", 100, 100, true, true);
+                Image image3 = new Image("https://cdn.fifacm.com/content/media/imgs/fifa23/players/p213007.png", 100, 100, true, true);
                 idImagePlayer.setImage(image3);
                 });
 
