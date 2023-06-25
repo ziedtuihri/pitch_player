@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" styleClass="text-style" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.SignUpFXMLController">
    <children>
-      <VBox prefHeight="547.0" prefWidth="308.0">
+      <VBox prefHeight="547.0" prefWidth="308.0" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
          <children>
             <ImageView fitHeight="137.0" fitWidth="309.0">
                <image>

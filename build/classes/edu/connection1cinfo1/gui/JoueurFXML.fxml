@@ -29,7 +29,7 @@
             </AnchorPane>
             <VBox prefHeight="258.0" prefWidth="250.0" spacing="15.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
+                  <HBox fx:id="idNotificationList" alignment="CENTER" prefHeight="30.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fx:id="idNotificationNull" fitHeight="38.0" fitWidth="45.0">
                            <image>

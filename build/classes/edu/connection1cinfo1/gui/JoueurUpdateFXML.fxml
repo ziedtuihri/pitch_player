@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -47,9 +49,9 @@
                   </ImageView>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="329.0">
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="392.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Update details" wrappingWidth="311.47003173828125">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Update details" wrappingWidth="364.13665771484375">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -58,20 +60,26 @@
             </VBox>
          </children>
       </HBox>
-      <VBox layoutX="308.0" layoutY="40.0" prefHeight="496.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF;">
+      <VBox layoutX="308.0" layoutY="40.0" prefHeight="496.0" prefWidth="447.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <HBox prefHeight="48.0" prefWidth="387.0" style="-fx-background-color: #FFFFFF;" />
+            <HBox prefHeight="25.0" prefWidth="447.0" style="-fx-background-color: #FFFFFF;" />
             <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  First name" wrappingWidth="180.91796875" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  First name" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="199.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Last name" wrappingWidth="180.91796875" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Last name" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
@@ -87,13 +95,19 @@
                <children>
                   <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Phone" wrappingWidth="180.91796875" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Phone" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Equipe" wrappingWidth="180.91796875" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Equipe" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
@@ -109,13 +123,19 @@
                <children>
                   <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Height" wrappingWidth="180.91796875" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Height" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Weight" wrappingWidth="180.91796875" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Weight" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
@@ -131,13 +151,19 @@
                <children>
                   <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Scores" wrappingWidth="180.91796875" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Scores" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="193.0" spacing="10.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Adresse" wrappingWidth="180.91796875" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Adresse" wrappingWidth="180.91796875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
                         <TextField styleClass="textfield-design-update" stylesheets="@../../../css/style.css" />
                      </children>
                   </VBox>
@@ -148,6 +174,18 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="14.0" prefWidth="447.0" style="-fx-background-color: #FFFFFF;" />
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="447.0">
+               <children>
+                  <Button mnemonicParsing="false" stylesheets="@../../../css/style.css" text="Save">
+                     <styleClass>
+                        <String fx:value="button-design" />
+                        <String fx:value="button-style" />
+                     </styleClass>
+                  </Button>
+                  <HBox prefHeight="55.0" prefWidth="332.0" />
+               </children>
             </HBox>
          </children>
       </VBox>
