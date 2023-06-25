@@ -9,6 +9,7 @@
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 13px;
     -fx-padding: 10px 10px;
+    -fx-font-weight: bold;
 }
 
 .button-style:hover {
