@@ -14,13 +14,13 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="245.0" fitWidth="235.0" layoutY="-3.0">
+                  <ImageView fitHeight="202.0" fitWidth="235.0" layoutY="-3.0">
                      <image>
                         <Image url="@../../../img/Player_Card.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="79.0" fitWidth="185.0" layoutX="26.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="56.0" layoutY="26.0">
+                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="57.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="60.0" layoutY="14.0">
                      <image>
                         <Image url="@../../../img/pngwing.com.png" />
                      </image>
@@ -29,6 +29,19 @@
             </AnchorPane>
             <VBox prefHeight="258.0" prefWidth="250.0" spacing="15.0">
                <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="240.0">
+                     <children>
+                        <ImageView fx:id="idNotificationNull" fitHeight="45.0" fitWidth="50.0">
+                           <image>
+                              <Image url="@../../../img/notificationJJJ222.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="184.13668823242188">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Text>
+                     </children>
+                  </HBox>
                   <HBox fx:id="idAjoutEquipe" alignment="CENTER" prefHeight="35.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="34.0">
@@ -91,18 +104,18 @@
       </VBox>
       <VBox layoutX="235.0" prefHeight="507.0" prefWidth="447.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="447.0" style="-fx-background-color: #066164;">
                <children>
                   <VBox fx:id="idRtnJoueur" prefHeight="30.0" prefWidth="53.0">
                      <children>
-                        <ImageView fx:id="idReturnJoueur" fitHeight="27.0" fitWidth="49.0">
+                        <ImageView fx:id="idReturnJoueur" fitHeight="40.0" fitWidth="50.0">
                            <image>
                               <Image url="@../../../img/return_wiht.png" />
                            </image>
                         </ImageView>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="30.0" prefWidth="394.0">
+                  <VBox alignment="CENTER" prefHeight="35.0" prefWidth="386.0">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Player details" wrappingWidth="385.47003173828125">
                            <font>

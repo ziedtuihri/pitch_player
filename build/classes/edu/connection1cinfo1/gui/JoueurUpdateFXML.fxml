@@ -58,8 +58,9 @@
             </VBox>
          </children>
       </HBox>
-      <VBox layoutX="308.0" layoutY="40.0" prefHeight="496.0" prefWidth="385.0">
+      <VBox layoutX="308.0" layoutY="40.0" prefHeight="496.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF;">
          <children>
+            <HBox prefHeight="48.0" prefWidth="387.0" style="-fx-background-color: #FFFFFF;" />
             <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <VBox prefHeight="100.0" prefWidth="193.0" spacing="10.0">
