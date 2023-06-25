@@ -37,13 +37,13 @@
             </ImageView>
          </children>
       </VBox>
-      <Text fx:id="idMessageUsername" fill="#42ab80" layoutX="318.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email or Username:" wrappingWidth="166.80340576171875">
+      <Text fx:id="idMessageUsername" fill="#42ab80" layoutX="318.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email or Username:" wrappingWidth="166.80340576171875">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="idUsernameEmail" layoutX="318.0" layoutY="212.0" prefHeight="39.0" prefWidth="242.0" promptText="email or username" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
-      <Button fx:id="idSubmitEmail" layoutX="321.0" layoutY="338.0" mnemonicParsing="false" onAction="#SubmitCode" prefHeight="39.0" prefWidth="73.0" stylesheets="@../../../css/style.css" text="Submit">
+      <TextField fx:id="idUsernameEmail" layoutX="318.0" layoutY="288.0" prefHeight="39.0" prefWidth="242.0" promptText="email or username" styleClass="textfield-design" stylesheets="@../../../css/style.css" />
+      <Button fx:id="idSubmitEmail" layoutX="328.0" layoutY="338.0" mnemonicParsing="false" onAction="#SubmitCode" prefHeight="39.0" prefWidth="73.0" stylesheets="@../../../css/style.css" text="Submit">
          <styleClass>
             <String fx:value="button-design" />
             <String fx:value="button-style" />

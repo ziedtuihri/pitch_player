@@ -56,12 +56,25 @@ public class JoueurFXMLController implements Initializable {
     private ImageView idImageProfile;
     @FXML
     private VBox idRtnJoueur;
+    
+    private ImageView idNotificationRed;
+    @FXML
+    private ImageView idNotificationNull;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {        
+     
+        
+        
+        
+         // Load the new image
+        Image newImage = new Image(getClass().getResourceAsStream("../../../img/notificationJJJ.png"));
+
+        // Set the new image to the image view
+        idNotificationNull.setImage(newImage);
         
         
         idRtnJoueur.setOnMouseClicked(e -> {
@@ -104,7 +117,12 @@ public class JoueurFXMLController implements Initializable {
 
         });
        
-    }    
+    }   
+    
+    
+    public void checkNotification(){
+        
+    }
     
  
     
