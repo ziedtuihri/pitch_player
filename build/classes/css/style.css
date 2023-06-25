@@ -70,3 +70,14 @@
     -fx-pref-height: 30px; /* Add desired height */
     -fx-pref-width: 150px; /* Add desired width */
 }
+
+.vbox-custom {
+    -fx-pref-height: 547px;
+    -fx-pref-width: 308px;
+}
+
+.hbox-custom-return {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 447px;
+    -fx-background-color:  #066164;
+}
