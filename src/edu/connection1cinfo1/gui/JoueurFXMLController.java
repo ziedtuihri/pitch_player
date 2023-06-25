@@ -35,6 +35,7 @@ import java.util.List;
 import javafx.scene.Group;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 /**
  * FXML Controller class
  *
@@ -42,8 +43,6 @@ import javafx.scene.layout.VBox;
  */
 public class JoueurFXMLController implements Initializable {
 
-    @FXML
-    private ImageView idReturnJoueur;
     @FXML
     private HBox idAjoutEquipe;
     @FXML
@@ -60,21 +59,17 @@ public class JoueurFXMLController implements Initializable {
     private ImageView idNotificationRed;
     @FXML
     private ImageView idNotificationNull;
+    @FXML
+    private HBox idNotificationList;
+    @FXML
+    private Text idNumNotifications;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {        
-     
-        
-        
-        
-         // Load the new image
-        Image newImage = new Image(getClass().getResourceAsStream("../../../img/notificationJJJ.png"));
 
-        // Set the new image to the image view
-        idNotificationNull.setImage(newImage);
         
         
         idRtnJoueur.setOnMouseClicked(e -> {
@@ -89,6 +84,20 @@ public class JoueurFXMLController implements Initializable {
         stage.setScene(signUpScene);
         stage.setTitle("Login");
         stage.show();
+        });
+        
+        idNotificationList.setOnMouseClicked(e -> {
+            Parent root = null;
+                try {
+                    root = FXMLLoader.load(getClass().getResource("NotificationListFXML.fxml"));
+                } catch (IOException ex) {
+                    Logger.getLogger(VerificationFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            Scene signUpScene = new Scene(root);
+            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            stage.setScene(signUpScene);
+            stage.setTitle("Notification");
+            stage.show();
         });
         
         idAjoutEquipe.setOnMouseClicked(e -> {
@@ -121,6 +130,14 @@ public class JoueurFXMLController implements Initializable {
     
     
     public void checkNotification(){
+        
+        // Load the new image
+        Image newImage = new Image(getClass().getResourceAsStream("../../../img/notificationJJJ.png"));
+
+        // Set the new image to the image view
+        idNotificationNull.setImage(newImage);
+        
+        
         
     }
     

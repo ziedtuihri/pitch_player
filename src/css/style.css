@@ -82,3 +82,17 @@
     -fx-pref-width: 447px;
     -fx-background-color:  #066164;
 }
+
+.message-circle {
+    -fx-background-color: #42ab80;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 50%;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-alignment: center;
+    -fx-padding: 3px;
+}
