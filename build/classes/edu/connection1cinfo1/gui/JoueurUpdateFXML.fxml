@@ -36,7 +36,7 @@
             </ImageView>
          </children>
       </VBox>
-      <HBox alignment="CENTER" layoutX="308.0" prefHeight="40.0" prefWidth="387.0" style="-fx-background-color: #066164;">
+      <HBox alignment="CENTER" layoutX="308.0" prefHeight="40.0" prefWidth="387.0" style="-fx-background-color: #066164;" styleClass="hbox-custom-return" stylesheets="@../../../css/style.css">
          <children>
             <VBox fx:id="idRtnUpdate" prefHeight="40.0" prefWidth="55.0">
                <children>

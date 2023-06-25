@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
    <children>
-      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;">
+      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;" stylesheets="@../../../css/style.css">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -29,9 +29,9 @@
             </AnchorPane>
             <VBox prefHeight="258.0" prefWidth="250.0" spacing="15.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="240.0">
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
-                        <ImageView fx:id="idNotificationNull" fitHeight="45.0" fitWidth="50.0">
+                        <ImageView fx:id="idNotificationNull" fitHeight="38.0" fitWidth="45.0">
                            <image>
                               <Image url="@../../../img/notificationJJJ222.png" />
                            </image>
@@ -104,20 +104,20 @@
       </VBox>
       <VBox layoutX="235.0" prefHeight="507.0" prefWidth="447.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="447.0" style="-fx-background-color: #066164;" styleClass="hbox-custom-return" stylesheets="@../../../css/style.css">
                <children>
-                  <VBox fx:id="idRtnJoueur" prefHeight="30.0" prefWidth="53.0">
+                  <VBox fx:id="idRtnJoueur" alignment="CENTER" prefHeight="40.0" prefWidth="43.0">
                      <children>
-                        <ImageView fx:id="idReturnJoueur" fitHeight="40.0" fitWidth="50.0">
+                        <ImageView fitHeight="26.0" fitWidth="42.0">
                            <image>
-                              <Image url="@../../../img/return_wiht.png" />
+                              <Image url="@../../../img/log_out.png" />
                            </image>
                         </ImageView>
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="35.0" prefWidth="386.0">
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Player details" wrappingWidth="385.47003173828125">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="      Player details" wrappingWidth="385.47003173828125">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
