@@ -36,7 +36,12 @@
                               <Image url="@../../../img/notificationJJJ222.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="184.13668823242188">
+                        <Text fx:id="idNumNotifications" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="15.386016845703125">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="160.13665771484375">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Text>

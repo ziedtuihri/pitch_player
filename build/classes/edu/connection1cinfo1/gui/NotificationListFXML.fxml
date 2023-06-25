@@ -56,5 +56,6 @@
             </VBox>
          </children>
       </HBox>
+      <VBox fx:id="idmessageContainer" alignment="TOP_CENTER" layoutX="308.0" layoutY="40.0" prefHeight="517.0" prefWidth="228.0" spacing="10.0" />
    </children>
 </AnchorPane>
