@@ -10,6 +10,7 @@ import edu.pitchplayer.entities.Reservation;
 import edu.pitchplayer.entities.Terrain;
 import edu.pitchplayer.entities.User;
 import edu.pitchplayer.services.ReservationCRUD;
+import edu.pitchplayer.services.TerrainCRUD;
 import edu.pitchplayer.services.UserCRUD;
 import edu.pitchplayer.utils.MyConnection;
 import java.time.LocalDate;
@@ -27,7 +28,7 @@ public class PitchPlayer {
     public static void main(String[] args) {
         MyConnection mc = MyConnection.getInstance();
 // Creating an instance of UserCRUD
-        UserCRUD userCRUD = new UserCRUD();
+//        UserCRUD userCRUD = new UserCRUD();
 
         /* // Testing the addEntity method
         User newUser = new User();
@@ -48,14 +49,13 @@ public class PitchPlayer {
         System.out.println("User added successfully.");
          */
         // Testing the displayEntities method
-        List<User> userList = userCRUD.displayEntities();
-        for (User user : userList) {
-            System.out.println(user);
-        }
-
+//        List<User> userList = userCRUD.displayEntities();
+//        for (User user : userList) {
+//            System.out.println(user);
+//        }
         // Testing the getById method
-        int idToRetrieve = 3;
-        User retrievedUser = userCRUD.getById(idToRetrieve);
+//        int idToRetrieve = 3;
+//        User retrievedUser = userCRUD.getById(idToRetrieve);
         /*
         if (retrievedUser != null) {
             System.out.println("Retrieved User: " + retrievedUser);
@@ -81,9 +81,19 @@ public class PitchPlayer {
         userCRUD.update(retrievedUser);
          */
         // Testing the delete method
-        userCRUD.delete(retrievedUser);
-        System.out.println("User deleted successfully.");
+//        userCRUD.delete(retrievedUser);
+//        System.out.println("User deleted successfully.");
 
+       Terrain t3 = new Terrain(2 ,"OLD TRAFFORD","manouba", 60 , 15 );
+        TerrainCRUD tr = new TerrainCRUD();
+//        tr.addEntity(t2);
+//        tr.update(t3);
+     
+        
+//        tr.delete(t3);
+        System.out.println(tr.displayEntities());
+        
     }
+    
 
 }

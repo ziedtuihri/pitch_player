@@ -3,19 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/WIJDEN/Desktop/PitchPlayer/PitchPlayer/src/edu/pitchplayer/tests/PitchPlayer.java</file>
-=======
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/entities/Tournoi.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/gui/AjouterTerrainFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/services/TournoiCRUD.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/tests/PitchPlayer.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/services/TerrainCRUD.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/gui/AjouterTournoiFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/tests/FXMainTournoi.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/entities/Terrain.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/connection1cinfo1/tests/FXMainClass.java</file>
->>>>>>> 1d920567cb62456541694ab030f57de1319150b3
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/TerrainService.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/tests/FXAccueilTerrain.java</file>
         </group>
     </open-files>
 </project-private>

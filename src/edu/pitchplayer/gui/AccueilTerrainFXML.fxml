@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.AccuilTerrainFXMLController">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="407.0" prefWidth="149.0" style="-fx-background-color: #056063;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AjouterTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Ajouter Terrain" textFill="#f2ebeb">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AfficherTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Gestion Terrain" textFill="#f2f0f0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Planning Terrain" textFill="#fffbfb">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="149.0" mnemonicParsing="false" onAction="#RechercheTerainAction" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Recherche Terrain" textFill="#fffbfb">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="fxVilleNbr" layoutX="225.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="fxVille" prefWidth="75.0" text="Ville" />
+          <TableColumn fx:id="fxNombre" prefWidth="101.0" text="Nbr Terrain" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

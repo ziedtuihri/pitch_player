@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.AJouterTerrainFXMLController">
+   <children>
+      <Label layoutX="80.0" layoutY="36.0" text="Nom Terrain" />
+      <Label layoutX="80.0" layoutY="88.0" text="Adresse" />
+      <Label layoutX="79.0" layoutY="144.0" text="Longeur" />
+      <Label layoutX="86.0" layoutY="205.0" text="Largeur" />
+      <Label layoutX="86.0" layoutY="281.0" text="Image" />
+      <TextField fx:id="fxNom" layoutX="217.0" layoutY="31.0" promptText="Nom du terrain" />
+      <TextField fx:id="fxAdresse" layoutX="217.0" layoutY="83.0" promptText="Adresse" />
+      <Button layoutX="435.0" layoutY="352.0" mnemonicParsing="false" onAction="#AjoutTerrainAction" text="Ajouter" />
+      <Button layoutX="342.0" layoutY="352.0" mnemonicParsing="false" onAction="#AnnulerAction" text="Annuler" />
+      <Button layoutX="260.0" layoutY="352.0" mnemonicParsing="false" onAction="#RetourAction" text="Retour" />
+      <TextField fx:id="fxLongeur" layoutX="219.0" layoutY="139.0" prefHeight="31.0" prefWidth="83.0" promptText="Longeur" />
+      <TextField fx:id="fxLargeur" layoutX="219.0" layoutY="200.0" prefHeight="31.0" prefWidth="83.0" promptText="Largeur" />
+      <Label fx:id="stMessageLongeur" layoutX="217.0" layoutY="170.0" prefHeight="21.0" prefWidth="281.0" textFill="#f50000" />
+      <Label fx:id="stMessageLargeur" layoutX="217.0" layoutY="231.0" prefHeight="21.0" prefWidth="265.0" textFill="#f50808" />
+      <Label fx:id="stMessageNom" layoutX="217.0" layoutY="62.0" prefHeight="21.0" prefWidth="281.0" textFill="#f50000" />
+      <Label fx:id="stMessageAdresse" layoutX="217.0" layoutY="114.0" prefHeight="21.0" prefWidth="281.0" textFill="#f50000" />
+      <Button fx:id="browseButton" layoutX="219.0" layoutY="266.0" mnemonicParsing="false" onAction="#browseFile" prefHeight="31.0" prefWidth="199.0" text="Selectionner Image" />
+      <Button layoutX="79.0" layoutY="109.0" mnemonicParsing="false" onAction="#MapsAction" text="Button" />
+   </children>
+</AnchorPane>

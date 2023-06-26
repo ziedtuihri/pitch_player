@@ -5,6 +5,8 @@
  */
 package edu.pitchplayer.entities;
 
+import javafx.beans.property.IntegerProperty;
+
 /**
  *
  * @author WIJDEN
@@ -106,4 +108,37 @@ public class Terrain {
         return "Terrain{" + "id=" + id + ", nom=" + nom + ", adresse=" + adresse + ", ville=" + ville + ", longueur=" + longueur + ", largeur=" + largeur + ", owner=" + owner + ", disponible=" + disponible + '}';
     }
 
+    public Terrain(String nom, String adresse, float longueur, float largeur) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.longueur = longueur;
+        this.largeur = largeur;
+    }
+
+    public Terrain(int id, String nom, String adresse, float longueur, float largeur) {
+        this.id = id;
+        this.nom = nom;
+        this.adresse = adresse;
+        this.longueur = longueur;
+        this.largeur = largeur;
+    }
+
+    public Terrain(String nom, String adresse, String ville, float longueur, float largeur, boolean disponible) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.longueur = longueur;
+        this.largeur = largeur;
+        this.disponible = disponible;
+    }
+
+    public Terrain(String nom, String adresse, String ville, float longueur, float largeur) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.longueur = longueur;
+        this.largeur = largeur;
+    }
+    
+    
 }

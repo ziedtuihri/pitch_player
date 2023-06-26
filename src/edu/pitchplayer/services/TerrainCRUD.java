@@ -15,6 +15,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -45,9 +47,11 @@ public class TerrainCRUD implements ICRUD<Terrain> {
 
             pst.executeUpdate();
             pst.close();
+            System.out.println("Terrain Ajouter avec succes");
         } catch (SQLException ex) {
             System.out.println("Error adding terrain: " + ex.getMessage());
         }
+
     }
 
     @Override
@@ -59,20 +63,30 @@ public class TerrainCRUD implements ICRUD<Terrain> {
             ResultSet rs = st.executeQuery(query);
             UserCRUD userCRUD = new UserCRUD();
             while (rs.next()) {
-                int id = rs.getInt("id");
-                String nom = rs.getString("nom");
-                String adresse = rs.getString("adresse");
-                String ville = rs.getString("ville");
-                float longueur = rs.getFloat("longueur");
-                float largeur = rs.getFloat("largeur");
-                boolean disponibilite = rs.getBoolean("disponibilite");
-                int ownerId = rs.getInt("owner_id");
+                Terrain t = new Terrain();
+                t.setId(rs.getInt(1));
+                t.setNom(rs.getString("nom"));
+                t.setAdresse(rs.getString("adresse"));
+                t.setVille(rs.getString("ville"));
+                t.setLongueur(rs.getFloat("longueur"));
+                t.setLargeur(rs.getFloat("largeur"));
+                t.setDisponible(rs.getBoolean("disponibilite"));
+                
+//
+//                int id = rs.getInt("id");
+//                String nom = rs.getString("nom");
+//                String adresse = rs.getString("adresse");
+//                String ville = rs.getString("ville");
+//                float longueur = rs.getFloat("longueur");
+//                float largeur = rs.getFloat("largeur");
+//                boolean disponibilite = rs.getBoolean("disponibilite");
+//                int ownerId = rs.getInt("owner_id");
 
-                User owner = userCRUD.getById(ownerId);
+//                User owner = userCRUD.getById(ownerId);
+//
+//                Terrain terrain = new Terrain(nom, adresse, ville, longueur, largeur, owner, disponibilite);
 
-                Terrain terrain = new Terrain(nom, adresse, ville, longueur, largeur, owner, disponibilite);
-
-                terrains.add(terrain);
+                terrains.add(t);
             }
             rs.close();
             st.close();
@@ -81,7 +95,51 @@ public class TerrainCRUD implements ICRUD<Terrain> {
         }
         return terrains;
     }
+    
+    public ObservableList<Terrain> getTerrain(){
+        ObservableList<Terrain> myList = FXCollections.observableArrayList();
+         try {
+            String query = "SELECT * FROM Terrain";
+            Statement st = MyConnection.getInstance().getCnx().createStatement();
+            ResultSet rs = st.executeQuery(query);
+            UserCRUD userCRUD = new UserCRUD();
+            while (rs.next()) {
+                Terrain t = new Terrain();
+                t.setId(rs.getInt(1));
+                t.setNom(rs.getString("nom"));
+                t.setAdresse(rs.getString("adresse"));
+                t.setVille(rs.getString("ville"));
+                t.setLongueur(rs.getFloat("longueur"));
+                t.setLargeur(rs.getFloat("largeur"));
+                t.setDisponible(rs.getBoolean("disponibilite"));
+         myList.add(t);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            System.out.println("Error displaying terrains: " + ex.getMessage());
+        }
+        return myList;
+    }
 
+    public boolean existsNom(String nom) {
+    boolean exists = false;
+    try {
+        String query = "SELECT COUNT(*) FROM terrain WHERE nom = ?";
+        PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+        pst.setString(1, nom);
+        ResultSet rs = pst.executeQuery();
+        if (rs.next()) {
+            int count = rs.getInt(1);
+            exists = (count > 0);
+        }
+        rs.close();
+        pst.close();
+    } catch (SQLException ex) {
+        System.out.println("Erreur lors de la vérification de l'existence du nom : " + ex.getMessage());
+    }
+    return exists;
+}
     @Override
     public Terrain getById(int id) {
         Terrain terrain = null;
@@ -157,24 +215,20 @@ public class TerrainCRUD implements ICRUD<Terrain> {
 
     @Override
     public void delete(Terrain terrain) {
-        try {
+        
             String query = "DELETE FROM Terrain WHERE id = ?";
 
-            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+           try (PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query)) {
             pst.setInt(1, terrain.getId());
+
             int rows = pst.executeUpdate();
-
-            if (rows == 1) {
-                System.out.println("Terrain with ID: " + terrain.getId() + " deleted successfully.");
-            } else {
-                System.out.println("Failed to delete Terrain with ID: " + terrain.getId() + " !");
+            if (rows > 0) {
+                System.out.println("Terrain supprimé");
             }
-
-            pst.close();
         } catch (SQLException ex) {
-            System.err.println("Error deleting terrain: " + ex.getMessage());
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
-
     }
 
 }
