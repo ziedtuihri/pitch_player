@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -56,6 +57,10 @@
             </VBox>
          </children>
       </HBox>
-      <VBox fx:id="idmessageContainer" alignment="TOP_CENTER" layoutX="308.0" layoutY="40.0" prefHeight="517.0" prefWidth="228.0" spacing="10.0" />
+      <VBox fx:id="idmessageContainer" layoutX="308.0" layoutY="40.0" prefHeight="517.0" prefWidth="72.0" spacing="10.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></VBox>
+      <VBox fx:id="idMessageNotifications" layoutX="380.0" layoutY="40.0" prefHeight="517.0" prefWidth="182.0" />
    </children>
 </AnchorPane>

@@ -4,6 +4,12 @@
     -fx-font-weight: bold;
 }
 
+.my-anchor-pane {
+    -fx-pref-width: 754px;
+    -fx-pref-height: 547px;
+    -fx-background-color: white;
+}
+
 .button-style {
     -fx-background-color: #42ab80;
     -fx-text-fill: #FFFFFF;

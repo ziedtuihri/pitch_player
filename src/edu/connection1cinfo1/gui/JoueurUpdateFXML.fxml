@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurUpdateFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="693.0" styleClass="my-anchor-pane" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurUpdateFXMLController">
    <children>
-      <VBox prefHeight="536.0" prefWidth="308.0">
+      <VBox prefHeight="536.0" prefWidth="308.0" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
          <children>
-            <ImageView fitHeight="132.0" fitWidth="308.0">
+            <ImageView fitHeight="143.0" fitWidth="308.0">
                <image>
                   <Image url="@../../../img/Betway_SignUP_22.jpg" />
                </image>

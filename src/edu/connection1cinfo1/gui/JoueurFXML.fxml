@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="754.0" styleClass="my-anchor-pane" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
    <children>
-      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;" stylesheets="@../../../css/style.css">
+      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -41,7 +41,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="160.13665771484375">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="224.80328369140625">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Text>
@@ -54,7 +54,7 @@
                               <Image url="@../../../img/addd.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Ajouté équipe" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Ajouté équipe" wrappingWidth="246.4700927734375">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -68,7 +68,7 @@
                               <Image url="@../../../img/Search33.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Recherche équipe" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Recherche équipe" wrappingWidth="240.47003173828125">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -82,7 +82,7 @@
                               <Image url="@../../../img/update.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  modifié profile" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  modifié profile" wrappingWidth="235.80340576171875">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -96,7 +96,7 @@
                               <Image url="@../../../img/football-31%20(1).png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Match" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Match" wrappingWidth="234.47003173828125">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -107,7 +107,7 @@
             </VBox>
          </children>
       </VBox>
-      <VBox layoutX="235.0" prefHeight="507.0" prefWidth="447.0">
+      <VBox layoutX="308.0" prefHeight="547.0" prefWidth="374.0">
          <children>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="447.0" style="-fx-background-color: #066164;" styleClass="hbox-custom-return" stylesheets="@../../../css/style.css">
                <children>

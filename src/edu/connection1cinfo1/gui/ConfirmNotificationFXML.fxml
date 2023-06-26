@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="my-anchor-pane" stylesheets="@../../../css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.connection1cinfo1.gui.ConfirmNotificationFXMLController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="315.0" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/Betway_SignUP_22.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="138.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/1000_F_575562064_aboGRKKnXeax7LKKJnz9PUzW1BcTPExX.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="139.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/fans-soiree-championnat-assis-dans-gradins-generes-par-ia.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="145.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/360_F_557079131_WBP5YfclkWu7thu0hu6gAbmXfbjj5Lt7.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
