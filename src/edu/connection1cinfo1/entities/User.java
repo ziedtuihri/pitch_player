@@ -24,14 +24,29 @@ public class User {
     private String profile;
     private String code;
     private String role;
-    private Equipe equipe; //This is the Equipe User (role=joueur) will be part of
-    //Relationship is Equipe can have 1 or many Users (role = joueur) but User (role=joueur) can be a part of 1 and only Equipe
-    //Equipe also has a relationship with Tournoi (can be participating in a Tournoi, the User(role=joueur) when he participates in a Tournoi, he brings all the member of his Equipe to the Tournoi
-
+    private Equipe equipe;
+    
+    private final static User INSTANCE = new User();
+    
+    private User user;
+  
+    
     public User() {
 
     }
 
+    public static User getInstance(){
+        return INSTANCE;
+    }
+      
+    public void setUser(User u) {
+        this.user = u;
+    }
+  
+    public User getUser() {
+        return this.user;
+    }
+      
     public User(String username, String nom, String prenom, String email, String pwd, String adresse, String role) {
         this.username = username;
         this.nom = nom;
@@ -40,6 +55,10 @@ public class User {
         this.pwd = pwd;
         this.adresse = adresse;
         this.role = role;
+    }
+
+    public User(String username) {
+        this.username = username;
     }
     
     

@@ -1,5 +1,7 @@
 package edu.connection1cinfo1.gui;
 
+import edu.connection1cinfo1.entities.User;
+import static edu.connection1cinfo1.gui.LoginFXMLController.usernameInTheApp;
 import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -33,6 +35,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
 import javafx.scene.Group;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -64,12 +67,20 @@ public class JoueurFXMLController implements Initializable {
     @FXML
     private Text idNumNotifications;
 
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {        
 
+        User holder = User.getInstance();
+        // User u = holder.getUser();
+        // String username = u.getUsername();
+        
+        
+        System.out.println("///////////////"+holder.getUsername());
         
         
         idRtnJoueur.setOnMouseClicked(e -> {

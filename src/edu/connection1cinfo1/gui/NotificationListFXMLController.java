@@ -47,6 +47,7 @@ public class NotificationListFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         idReturnNotification.setOnMouseClicked(e -> {
         Parent root = null;
             try {
@@ -96,7 +97,7 @@ public class NotificationListFXMLController implements Initializable {
             stage.show();
         });
         Label titleLabe2 = new Label("description ... of this notification");
-        
+        titleLabe2.setStyle("-fx-font-weight: bold;");
         idmessageContainer.getChildren().addAll(stackPane);
         idMessageNotifications.getChildren().addAll(titleLabel, titleLabe2);
         
@@ -135,7 +136,7 @@ public class NotificationListFXMLController implements Initializable {
             stage.show();
         });
         Label titleLabe22 = new Label("description ... of this notification");
-        
+        titleLabe22.setStyle("-fx-font-weight: bold;");
         idmessageContainer.getChildren().addAll(stackPane2);
         idMessageNotifications.getChildren().addAll(titleLabel2, titleLabe22);
         

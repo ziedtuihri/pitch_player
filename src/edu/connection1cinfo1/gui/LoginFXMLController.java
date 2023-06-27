@@ -5,6 +5,7 @@
 package edu.connection1cinfo1.gui;
 
 
+import edu.connection1cinfo1.entities.User;
 import edu.connection1cinfo1.services.UserCRUD;
 import edu.connection1cinfo1.tests.FXMain;
 import edu.connection1cinfo1.utils.MyConnection;
@@ -66,6 +67,7 @@ public class LoginFXMLController implements Initializable {
      */
     
     private Stage stage;
+    public static String usernameInTheApp;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -112,12 +114,42 @@ public class LoginFXMLController implements Initializable {
             alertFN("Be carful", "Invalid Account !!!");
         }else
         if (BCrypt.checkpw(password, hashedPassword)) {
-                   Parent signUpRoot = FXMLLoader.load(getClass().getResource("JoueurFXML.fxml"));
-                    Scene signUpScene = new Scene(signUpRoot);
+                    /*
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("JoueurFXML.fxml"));
+                    Parent joueurRoot = loader.load();
+                    usernameInTheApp = username;
+                    
+                    User userName = new User(username);
+                    
+                    System.out.println(username+"///////////////"+usernameInTheApp+userName.getUsername());        
+                    stage.setUserData(userName);
+                    Scene joueurScene = new Scene(joueurRoot);
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    stage.setScene(signUpScene);
-                    stage.setTitle("Sign Up");
+                    stage.setScene(joueurScene);
+                    stage.setTitle("Player");
                     stage.show();
+                    */
+                    
+                    // Step 1
+                User u = new User(username);
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.close();
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("JoueurFXML.fxml"));
+                    Parent joueurRoot = loader.load();                  // Step 2
+                  User holder = User.getInstance();
+                  // Step 3
+                  holder.setUser(u);
+                  // Step 4
+                  Scene scene = new Scene(joueurRoot);
+                  stage.setScene(scene);
+                  stage.show();
+                } catch (IOException e) {
+                  System.err.println(String.format("Error: %s", e.getMessage()));
+                }
+                    
+
             } else {
                alertFN("Be carful", "Invalid username or password !!!");
             }

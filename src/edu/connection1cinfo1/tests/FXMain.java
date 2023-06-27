@@ -28,7 +28,7 @@ public class FXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        String url = "../gui/JoueurFXML.fxml";
+        String url = "../gui/LoginFXML.fxml";
         URL realUrl = getClass().getResource(url);
         FXMLLoader loader = new FXMLLoader(realUrl);
 

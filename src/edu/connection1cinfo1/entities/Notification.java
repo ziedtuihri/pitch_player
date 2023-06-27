@@ -4,6 +4,7 @@
  */
 package edu.connection1cinfo1.entities;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 /**
@@ -89,6 +90,10 @@ public class Notification {
 
     public String getVu() {
         return vu;
+    }
+
+    public void setDate(Date date) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

@@ -19,7 +19,7 @@
                         <Image url="@../../../img/Player_Card.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="57.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="60.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="60.0" layoutY="14.0">
                      <image>
                         <Image url="@../../../img/pngwing.com.png" />
@@ -113,7 +113,7 @@
                <children>
                   <VBox fx:id="idRtnJoueur" alignment="CENTER" prefHeight="40.0" prefWidth="43.0">
                      <children>
-                        <ImageView fitHeight="26.0" fitWidth="42.0">
+                        <ImageView fitHeight="35.0" fitWidth="45.0">
                            <image>
                               <Image url="@../../../img/log_out.png" />
                            </image>
