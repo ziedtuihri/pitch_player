@@ -66,8 +66,15 @@ public class JoueurFXMLController implements Initializable {
     private HBox idNotificationList;
     @FXML
     private Text idNumNotifications;
+    @FXML
+    private Label idUsernameLabel;
 
-    
+    public static String username;
+
+    public void setUsername(String username) {
+        idUsernameLabel.setText(username);
+        this.username = username;
+    }
     
     /**
      * Initializes the controller class.
@@ -75,12 +82,12 @@ public class JoueurFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {        
 
-        User holder = User.getInstance();
         // User u = holder.getUser();
         // String username = u.getUsername();
         
+        idUsernameLabel.setVisible(true);
         
-        System.out.println("///////////////"+holder.getUsername());
+        
         
         
         idRtnJoueur.setOnMouseClicked(e -> {

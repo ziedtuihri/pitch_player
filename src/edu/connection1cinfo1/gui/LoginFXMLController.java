@@ -114,41 +114,19 @@ public class LoginFXMLController implements Initializable {
             alertFN("Be carful", "Invalid Account !!!");
         }else
         if (BCrypt.checkpw(password, hashedPassword)) {
-                    /*
+                    
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("JoueurFXML.fxml"));
                     Parent joueurRoot = loader.load();
-                    usernameInTheApp = username;
                     
-                    User userName = new User(username);
+                    JoueurFXMLController joueurController = loader.getController();
+                    joueurController.setUsername(idUsername.getText().trim());
+                    JoueurFXMLController.username = idUsername.getText().trim();
                     
-                    System.out.println(username+"///////////////"+usernameInTheApp+userName.getUsername());        
-                    stage.setUserData(userName);
                     Scene joueurScene = new Scene(joueurRoot);
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     stage.setScene(joueurScene);
                     stage.setTitle("Player");
                     stage.show();
-                    */
-                    
-                    // Step 1
-                User u = new User(username);
-                Node node = (Node) event.getSource();
-                Stage stage = (Stage) node.getScene().getWindow();
-                stage.close();
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("JoueurFXML.fxml"));
-                    Parent joueurRoot = loader.load();                  // Step 2
-                  User holder = User.getInstance();
-                  // Step 3
-                  holder.setUser(u);
-                  // Step 4
-                  Scene scene = new Scene(joueurRoot);
-                  stage.setScene(scene);
-                  stage.show();
-                } catch (IOException e) {
-                  System.err.println(String.format("Error: %s", e.getMessage()));
-                }
-                    
 
             } else {
                alertFN("Be carful", "Invalid username or password !!!");

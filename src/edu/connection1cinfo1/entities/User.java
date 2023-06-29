@@ -26,27 +26,13 @@ public class User {
     private String role;
     private Equipe equipe;
     
-    private final static User INSTANCE = new User();
     
-    private User user;
   
     
     public User() {
 
     }
-
-    public static User getInstance(){
-        return INSTANCE;
-    }
-      
-    public void setUser(User u) {
-        this.user = u;
-    }
-  
-    public User getUser() {
-        return this.user;
-    }
-      
+    
     public User(String username, String nom, String prenom, String email, String pwd, String adresse, String role) {
         this.username = username;
         this.nom = nom;
