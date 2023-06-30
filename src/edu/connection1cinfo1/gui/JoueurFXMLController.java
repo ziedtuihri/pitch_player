@@ -12,6 +12,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import edu.connection1cinfo1.services.NotificationCRUD;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -66,30 +68,18 @@ public class JoueurFXMLController implements Initializable {
     private HBox idNotificationList;
     @FXML
     private Text idNumNotifications;
-    @FXML
-    private Label idUsernameLabel;
 
-    public static String username;
 
-    public void setUsername(String username) {
-        idUsernameLabel.setText(username);
-        this.username = username;
-    }
+    public static int idUsername;
+
     
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {        
+    public void initialize(URL url, ResourceBundle rb) {
 
-        // User u = holder.getUser();
-        // String username = u.getUsername();
-        
-        idUsernameLabel.setVisible(true);
-        
-        
-        
-        
+        checkNotification();
         idRtnJoueur.setOnMouseClicked(e -> {
         Parent root = null;
             try {
@@ -102,6 +92,7 @@ public class JoueurFXMLController implements Initializable {
         stage.setScene(signUpScene);
         stage.setTitle("Login");
         stage.show();
+        JoueurFXMLController.idUsername = 0;
         });
         
         idNotificationList.setOnMouseClicked(e -> {
@@ -133,6 +124,7 @@ public class JoueurFXMLController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(VerificationFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
+
         Scene signUpScene = new Scene(root);
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.setScene(signUpScene);
@@ -143,20 +135,23 @@ public class JoueurFXMLController implements Initializable {
         idShowMatch.setOnMouseClicked(e -> {
 
         });
-       
+
     }   
     
     
     public void checkNotification(){
-        
-        // Load the new image
-        Image newImage = new Image(getClass().getResourceAsStream("../../../img/notificationJJJ.png"));
 
-        // Set the new image to the image view
-        idNotificationNull.setImage(newImage);
-        
-        
-        
+        NotificationCRUD notificationCRUD = new NotificationCRUD();
+        if(notificationCRUD.checkNotification(idUsername) != 0){
+            idNumNotifications.setText(String.valueOf(notificationCRUD.checkNotification(idUsername)));
+
+            // Load the new image
+            Image newImage = new Image(getClass().getResourceAsStream("../../../img/notificationJJJ.png"));
+
+            // Set the new image to the image view
+            idNotificationNull.setImage(newImage);
+        }
+
     }
     
  

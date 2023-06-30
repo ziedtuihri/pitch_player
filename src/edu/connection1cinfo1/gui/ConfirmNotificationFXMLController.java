@@ -9,13 +9,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -27,6 +31,24 @@ public class ConfirmNotificationFXMLController implements Initializable {
 
     @FXML
     private VBox idReturnCode;
+    @FXML
+    private Circle idCercle;
+    @FXML
+    private Text idTextForCercle;
+    @FXML
+    private Text idSenderNotification;
+    @FXML
+    private Text idDateNotification;
+    @FXML
+    private Text idReceiver;
+    @FXML
+    private Text idNameSender;
+    @FXML
+    private Text idMessegeNotification;
+    @FXML
+    private Text idNameSenderNOtification;
+    @FXML
+    private ImageView idDeleteNotification;
 
     /**
      * Initializes the controller class.
@@ -47,11 +69,15 @@ public class ConfirmNotificationFXMLController implements Initializable {
         stage.setTitle("Confirmation");
         stage.show();
         });
-        
-        
-        
-        
-        
+
     }    
+
+    @FXML
+    private void acceptNotification(ActionEvent event) {
+    }
+
+    @FXML
+    private void rejectNotification(ActionEvent event) {
+    }
     
 }

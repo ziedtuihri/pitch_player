@@ -47,7 +47,7 @@ public class NotificationCRUD implements ICRUD<Notification> {
     
     public int checkNotification(int id_user){
         try {
-            String query = "SELECT COUNT(*) FROM `notification` WHERE id_user_receive = ?";
+            String query = "SELECT COUNT(*) FROM `notification` WHERE id_user_receive = ? AND vu LIKE 'no'";
             PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
             pst.setInt(1, id_user);
             ResultSet rs = pst.executeQuery();
@@ -73,6 +73,7 @@ public class NotificationCRUD implements ICRUD<Notification> {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
+                int id = rs.getInt("id");
                 int id_user_sent = rs.getInt("id_user_sent");
                 int id_user_receive = rs.getInt("id_user_receive");
                 String messege = rs.getString("messege");
@@ -82,7 +83,8 @@ public class NotificationCRUD implements ICRUD<Notification> {
         
 
                 Notification notification = new Notification();
-                notification = new Notification();
+
+                notification.setId(id);
                 notification.setId_user_sent(id_user_sent);
                 notification.setId_user_receive(id_user_receive);
                 notification.setMessege(messege);

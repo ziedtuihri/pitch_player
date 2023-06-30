@@ -8,6 +8,7 @@ package edu.connection1cinfo1.services;
 import edu.connection1cinfo1.entities.Equipe;
 import edu.connection1cinfo1.entities.User;
 
+import edu.connection1cinfo1.gui.JoueurFXMLController;
 import edu.connection1cinfo1.interfaces.ICRUD;
 import edu.connection1cinfo1.utils.MyConnection;
 import java.sql.PreparedStatement;
@@ -325,6 +326,60 @@ public class UserCRUD implements ICRUD<User> {
             System.out.println(ex.getMessage());
             return false;
         }
+    }
+
+    public int getId(String username){
+        try {
+
+            int idUser = 0;
+            String query = "SELECT id FROM `user` WHERE (email = ? OR username = ?)";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setString(1, username);
+            pst.setString(2, username);
+
+            ResultSet rs = pst.executeQuery();
+            if(rs.next()){
+                idUser  = rs.getInt("id");
+            }
+
+            rs.close();
+            pst.close();
+            return idUser;
+
+        } catch (SQLException ex) {
+            System.out.println("Error checking Account existence: " + ex.getMessage());
+            return 0;
+        }
+    }
+
+
+
+    public String getNameById(int id_user){
+
+        String nom = null, prenom = null;
+        try {
+
+
+            String query = "SELECT nom, prenom FROM `user` WHERE id = ?";
+            PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+            pst.setInt(1, id_user);
+
+            ResultSet rs = pst.executeQuery();
+            if(rs.next()){
+                nom  = rs.getString("nom");
+                prenom  = rs.getString("prenom");
+            }
+
+            rs.close();
+            pst.close();
+
+            return nom+"_"+prenom;
+
+        } catch (SQLException ex) {
+            System.out.println("Error checking Account existence: " + ex.getMessage());
+            return "null";
+        }
+
     }
 
 }

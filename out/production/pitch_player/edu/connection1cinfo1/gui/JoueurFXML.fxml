@@ -8,73 +8,95 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="754.0" styleClass="my-anchor-pane" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.JoueurFXMLController">
    <children>
-      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;">
+      <VBox prefHeight="507.0" prefWidth="201.0" style="-fx-background-color: #056063;" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="245.0" fitWidth="235.0" layoutY="-3.0">
+                  <ImageView fitHeight="201.0" fitWidth="225.0" layoutX="42.0">
                      <image>
                         <Image url="@../../../img/Player_Card.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="109.0" fitWidth="163.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="79.0" fitWidth="185.0" layoutX="26.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="92.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="92.0" layoutY="16.0">
+                     <image>
+                        <Image url="@../../../img/pngwing.com.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <VBox prefHeight="258.0" prefWidth="250.0" spacing="15.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                  <HBox fx:id="idNotificationList" alignment="CENTER" prefHeight="30.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
+                     <children>
+                        <ImageView fx:id="idNotificationNull" fitHeight="38.0" fitWidth="45.0">
+                           <image>
+                              <Image url="@../../../img/notificationJJJ222.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="idNumNotifications" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="15.386016845703125">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" wrappingWidth="224.80328369140625">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="idAjoutEquipe" alignment="CENTER" prefHeight="35.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="34.0">
                            <image>
                               <Image url="@../../../img/addd.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Ajouté équipe" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Ajouté équipe" wrappingWidth="246.4700927734375">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                  <HBox fx:id="idRechercheEquipe" alignment="CENTER" prefHeight="35.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="30.0">
                            <image>
                               <Image url="@../../../img/Search33.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Recherche équipe" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Recherche équipe" wrappingWidth="240.47003173828125">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                  <HBox fx:id="idUpdateProfile" alignment="CENTER" prefHeight="35.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="27.0" fitWidth="33.0">
                            <image>
                               <Image url="@../../../img/update.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  modifié profile" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  modifié profile" wrappingWidth="235.80340576171875">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="235.0">
+                  <HBox fx:id="idShowMatch" alignment="CENTER" prefHeight="35.0" prefWidth="235.0" styleClass="mous-moved" stylesheets="@../../../css/style.css">
                      <children>
                         <ImageView fitHeight="33.0" fitWidth="35.0">
                            <image>
                               <Image url="@../../../img/football-31%20(1).png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Match" wrappingWidth="185.13671875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Match" wrappingWidth="234.47003173828125">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -85,20 +107,28 @@
             </VBox>
          </children>
       </VBox>
-      <VBox layoutX="235.0" prefHeight="507.0" prefWidth="447.0">
+      <VBox layoutX="308.0" prefHeight="547.0" prefWidth="374.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="447.0" style="-fx-background-color: #066164;">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="447.0" style="-fx-background-color: #066164;" styleClass="hbox-custom-return" stylesheets="@../../../css/style.css">
                <children>
-                  <ImageView fitHeight="27.0" fitWidth="42.0">
-                     <image>
-                        <Image url="@../../../img/return_wiht.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Player details" wrappingWidth="385.47003173828125">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Text>
+                  <VBox fx:id="idRtnJoueur" alignment="CENTER" prefHeight="40.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0">
+                           <image>
+                              <Image url="@../../../img/log_out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="35.0" prefWidth="386.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="      Player details" wrappingWidth="385.47003173828125">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
             <HBox prefHeight="54.0" prefWidth="447.0">
@@ -231,7 +261,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="199.0" prefHeight="54.0" prefWidth="447.0">
                <children>
-                  <VBox prefHeight="45.0" prefWidth="223.0" spacing="10.0">
+                  <VBox prefHeight="54.0" prefWidth="192.0" spacing="10.0">
                      <children>
                         <Text fill="#066164" strokeType="OUTSIDE" strokeWidth="0.0" text="  weight" wrappingWidth="216.8033447265625">
                            <font>

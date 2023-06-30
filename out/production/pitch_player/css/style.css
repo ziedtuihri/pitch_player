@@ -4,11 +4,18 @@
     -fx-font-weight: bold;
 }
 
+.my-anchor-pane {
+    -fx-pref-width: 754px;
+    -fx-pref-height: 547px;
+    -fx-background-color: white;
+}
+
 .button-style {
     -fx-background-color: #42ab80;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 13px;
     -fx-padding: 10px 10px;
+    -fx-font-weight: bold;
 }
 
 .button-style:hover {
@@ -20,13 +27,11 @@
 }
 
 .button-design{
-    
     -fx-background-color:linear-gradient(to bottom right,  #056063, #42ab80);
     -fx-background-radius:20px;
     -fx-min-width: 80px;
     -fx-min-height: 30px;
     -fx-cursor:hand;
-    
 }
 
 .button-design:hover{
@@ -54,4 +59,44 @@
 
 .hypertext-design:hover{
     -fx-underline:true;
+}
+
+.mous-moved:hover{
+    -fx-background-color: #42ab80;
+}
+
+
+.textfield-design-update{
+    -fx-background-color:FFFFFF;
+    -fx-background-radius:15px;
+    -fx-border-color:linear-gradient(to bottom right, #056063, #42ab80);
+    -fx-border-radius:15px;
+    -fx-text-inner-color:#000;
+    -fx-pref-height: 30px; /* Add desired height */
+    -fx-pref-width: 150px; /* Add desired width */
+}
+
+.vbox-custom {
+    -fx-pref-height: 547px;
+    -fx-pref-width: 308px;
+}
+
+.hbox-custom-return {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 447px;
+    -fx-background-color:  #066164;
+}
+
+.message-circle {
+    -fx-background-color: #42ab80;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 50%;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-alignment: center;
+    -fx-padding: 3px;
 }

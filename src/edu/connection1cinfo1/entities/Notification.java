@@ -17,14 +17,14 @@ public class Notification {
     private int id_user_sent;
     private int id_user_receive;
     private String messege;
-    private LocalDate date;
+    private Date date;
     private String type;
     private String vu;
 
     public Notification() {
     }
 
-    public Notification(int id, int id_user_sent, int id_user_receive, String messege, LocalDate date, String type, String vu) {
+    public Notification(int id, int id_user_sent, int id_user_receive, String messege, Date date, String type, String vu) {
         this.id = id;
         this.id_user_sent = id_user_sent;
         this.id_user_receive = id_user_receive;
@@ -52,7 +52,7 @@ public class Notification {
         this.messege = messege;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -80,7 +80,7 @@ public class Notification {
         return messege;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -92,10 +92,18 @@ public class Notification {
         return vu;
     }
 
-    public void setDate(Date date) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public String toString() {
+        return "Notification{" +
+                "id=" + id +
+                ", id_user_sent=" + id_user_sent +
+                ", id_user_receive=" + id_user_receive +
+                ", messege='" + messege + '\'' +
+                ", date=" + date +
+                ", type='" + type + '\'' +
+                ", vu='" + vu + '\'' +
+                '}';
     }
-    
-    
-    
+
+
 }

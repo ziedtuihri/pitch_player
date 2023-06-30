@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,13 +14,13 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="202.0" fitWidth="235.0" layoutY="-3.0">
+                  <ImageView fitHeight="201.0" fitWidth="225.0" layoutX="42.0">
                      <image>
                         <Image url="@../../../img/Player_Card.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="60.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="60.0" layoutY="14.0">
+                  <ImageView fitHeight="54.0" fitWidth="122.0" layoutX="92.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="idImageProfile" fitHeight="97.0" fitWidth="116.0" layoutX="92.0" layoutY="16.0">
                      <image>
                         <Image url="@../../../img/pngwing.com.png" />
                      </image>
@@ -310,7 +309,6 @@
                   </VBox>
                </children>
             </HBox>
-            <Label fx:id="idUsernameLabel" prefHeight="32.0" prefWidth="168.0" text="Username" />
          </children>
       </VBox>
    </children>
