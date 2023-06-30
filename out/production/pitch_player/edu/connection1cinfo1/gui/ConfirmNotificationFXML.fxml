@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="my-anchor-pane" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.ConfirmNotificationFXMLController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="315.0" styleClass="vbox-custom" stylesheets="@../../../css/style.css">
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/Betway_SignUP_22.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="138.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/1000_F_575562064_aboGRKKnXeax7LKKJnz9PUzW1BcTPExX.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="139.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/fans-soiree-championnat-assis-dans-gradins-generes-par-ia.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="145.0" fitWidth="308.0">
+               <image>
+                  <Image url="@../../../img/360_F_557079131_WBP5YfclkWu7thu0hu6gAbmXfbjj5Lt7.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="308.0" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-custom-return" stylesheets="@../../../css/style.css">
+         <children>
+            <VBox fx:id="idReturnCode" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="53.0">
+                     <image>
+                        <Image url="@../../../img/return_wiht.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="377.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="   Confirmation " wrappingWidth="396.13671875">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutX="308.0" layoutY="40.0" prefHeight="56.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <StackPane prefHeight="75.0" prefWidth="82.0">
+               <children>
+                  <Circle fx:id="idCercle" fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE">
+                     <StackPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </StackPane.margin></Circle>
+                  <Text fx:id="idTextForCercle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="JM">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets left="5.0" right="5.0" />
+               </opaqueInsets>
+            </StackPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="379.0" layoutY="40.0" prefHeight="50.0" prefWidth="379.0">
+         <children>
+            <Text fx:id="idSenderNotification" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;joe-joe@companyname.com&gt;" wrappingWidth="276.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="idDateNotification" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="76.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="308.0" layoutY="99.0" prefHeight="40.0" prefWidth="450.0" style="-fx-background-color: #066164;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="To:  ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="idReceiver" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="emailReceiver@mail.com" wrappingWidth="322.80340576171875">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Text layoutX="322.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dear " wrappingWidth="39.3801858946681">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="idNameSender" layoutX="362.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condidate Joe" wrappingWidth="246.5831298828125">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="idMessegeNotification" layoutX="327.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I'm a good Player and I want to be part of your team " wrappingWidth="336.80340576171875" />
+      <Text layoutX="327.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can you accept my invitation to enjoy playing football" wrappingWidth="308.00000132620335" />
+      <Text layoutX="329.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Best regards ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="idNameSenderNOtification" layoutX="331.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joe" wrappingWidth="164.256591796875" />
+      <Button layoutX="327.0" layoutY="391.0" mnemonicParsing="false" onAction="#acceptNotification" stylesheets="@../../../css/style.css" text="Accept">
+         <styleClass>
+            <String fx:value="button-design" />
+            <String fx:value="button-style" />
+         </styleClass></Button>
+      <Button layoutX="455.0" layoutY="391.0" mnemonicParsing="false" onAction="#rejectNotification" stylesheets="@../../../css/style.css" text="Reject">
+         <styleClass>
+            <String fx:value="button-design" />
+            <String fx:value="button-style" />
+         </styleClass></Button>
+      <ImageView fx:id="idDeleteNotification" fitHeight="40.0" fitWidth="50.0" layoutX="328.0" layoutY="457.0">
+         <image>
+            <Image url="@../../../img/3817209.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="387.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete notification." wrappingWidth="195.9814453125">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
