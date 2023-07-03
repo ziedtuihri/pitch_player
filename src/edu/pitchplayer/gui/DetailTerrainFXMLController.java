@@ -45,11 +45,13 @@ public class DetailTerrainFXMLController implements Initializable {
   public void setTerrain(Terrain terrain) {
  this.terrain = terrain;
 
+
      fxNom.setText(terrain.getNom());
         fxAdresse.setText(terrain.getAdresse());
         fxVille.setText(terrain.getVille());
-        fxLongeur.setText(Float.toString(terrain.getLongueur()));
-        fxLargeur.setText(Float.toString(terrain.getLargeur()));
+        fxLongeur.setText(String.valueOf(terrain.getLongueur()));
+    fxLargeur.setText(String.valueOf(terrain.getLargeur()));
+       
     }
         
    

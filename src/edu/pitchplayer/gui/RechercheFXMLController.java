@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.pitchplayer.gui;
 
 import java.net.URL;
@@ -27,6 +22,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
+import java.awt.image.BufferedImage;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
 
 public class RechercheFXMLController implements Initializable {
 
@@ -81,33 +83,14 @@ public class RechercheFXMLController implements Initializable {
 
     @FXML
     private void EffacerAction(ActionEvent event) {
-         fxRecherche.setText("");
-        
+        fxRecherche.setText("");
     }
 
     @FXML
     private void RetourAction(ActionEvent event) {
-         try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/AccueilTerrainFXML.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-    }
-
-    @FXML
-    private void DetailAction(ActionEvent event) {
-          Terrain terrainSelectionne = fxView.getSelectionModel().getSelectedItem();
-    if (terrainSelectionne != null) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/DetailTerrainFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/AccueilTerrainFXML.fxml"));
             Parent root = loader.load();
-            DetailTerrainFXMLController detailController = loader.getController();
-            detailController.setTerrain(terrainSelectionne);
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -116,6 +99,61 @@ public class RechercheFXMLController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void DetailAction(ActionEvent event) {
+        Terrain terrainSelectionne = fxView.getSelectionModel().getSelectedItem();
+        if (terrainSelectionne != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/DetailTerrainFXML.fxml"));
+                Parent root = loader.load();
+                DetailTerrainFXMLController detailController = loader.getController();
+                detailController.setTerrain(terrainSelectionne);
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    private void QRCodeAction(ActionEvent event) {
+        Terrain terrainSelectionne = fxView.getSelectionModel().getSelectedItem();
+        if (terrainSelectionne != null) {
+            try {
+                int qrWidth = 300;
+                int qrHeight = 300;
+                BitMatrix bitMatrix = generateQRCode(terrainSelectionne, qrWidth, qrHeight);
+
+                // Créer une nouvelle fenêtre pour afficher le code QR
+                Stage qrCodeStage = new Stage();
+                qrCodeStage.setTitle("QR Code");
+
+                // Charger le fichier FXML de la vue QRCodeFXML.fxml
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../gui/QRCodeFXML.fxml"));
+                Parent root = loader.load();
+
+                // Obtenir le contrôleur QRCodeFXMLController
+                QRCodeFXMLController qrCodeController = loader.getController();
+
+                // Appeler la méthode setQRCodeImage pour définir l'image du code QR dans le contrôleur
+                qrCodeController.setQRCodeImage(matrixToImage(bitMatrix));
+
+                // Créer une scène et l'associer à la fenêtre
+                Scene scene = new Scene(root);
+                qrCodeStage.setScene(scene);
+
+                // Afficher la fenêtre
+                qrCodeStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private class TerrainListCell extends javafx.scene.control.ListCell<Terrain> {
@@ -125,8 +163,29 @@ public class RechercheFXMLController implements Initializable {
             if (empty || terrain == null) {
                 setText(null);
             } else {
-                setText(terrain.getNom());
+                setText(terrain.getNom() + " - " + terrain.getAdresse() + " - " + terrain.getVille());
             }
         }
+    }
+
+    private BitMatrix generateQRCode(Terrain terrain, int width, int height) throws WriterException {
+        String qrText = terrain.getNom() + " " + terrain.getAdresse() + " " + terrain.getVille() + " " + terrain.getLongueur() + " " + terrain.getLargeur();
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+        return qrCodeWriter.encode(qrText, BarcodeFormat.QR_CODE, width, height);
+    }
+
+    private Image matrixToImage(BitMatrix matrix) {
+        int width = matrix.getWidth();
+        int height = matrix.getHeight();
+        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                int color = matrix.get(x, y) ? 0x000000 : 0xFFFFFF;
+                bufferedImage.setRGB(x, y, color);
+            }
+        }
+
+        return SwingFXUtils.toFXImage(bufferedImage, null);
     }
 }

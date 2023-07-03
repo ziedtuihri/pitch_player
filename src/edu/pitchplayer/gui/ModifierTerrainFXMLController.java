@@ -68,8 +68,8 @@ public class ModifierTerrainFXMLController implements Initializable {
         terrain.setNom(fxNom.getText());
         terrain.setAdresse(fxAdresse.getText());
         terrain.setVille(fxVille.getText());
-        terrain.setLongueur(Float.parseFloat(fxLongueur.getText()));
-        terrain.setLargeur(Float.parseFloat(fxLargeur.getText()));
+        terrain.setLongueur((int) Float.parseFloat(fxLongueur.getText()));
+        terrain.setLargeur((int) Float.parseFloat(fxLargeur.getText()));
         terrain.setDisponible(fxDisponibilite.isSelected());
 
         // Mettre à jour le terrain dans la base de données

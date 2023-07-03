@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -40,11 +43,26 @@
             </Button>
          </children>
       </VBox>
-      <TableView fx:id="fxVilleNbr" layoutX="225.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="fxVilleNbr" layoutX="211.0" layoutY="50.0" prefHeight="200.0" prefWidth="169.0">
         <columns>
           <TableColumn fx:id="fxVille" prefWidth="75.0" text="Ville" />
-          <TableColumn fx:id="fxNombre" prefWidth="101.0" text="Nbr Terrain" />
+          <TableColumn fx:id="fxNombre" prefWidth="94.0" text="Nbr terrain" />
         </columns>
       </TableView>
+      <TableView fx:id="fxTerrainTournoi" layoutX="383.0" layoutY="50.0" prefHeight="200.0" prefWidth="222.0">
+        <columns>
+          <TableColumn fx:id="fxNomTerrain" prefWidth="100.0" text="Nom terrain" />
+          <TableColumn fx:id="fxNbrTournoi" prefWidth="102.0" text="Nbr Tournoi" />
+        </columns>
+      </TableView>
+      <BarChart fx:id="fxBarChart" layoutX="252.0" layoutY="251.0" prefHeight="144.0" prefWidth="200.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      
    </children>
 </AnchorPane>

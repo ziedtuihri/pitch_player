@@ -68,8 +68,8 @@ public class TerrainCRUD implements ICRUD<Terrain> {
                 t.setNom(rs.getString("nom"));
                 t.setAdresse(rs.getString("adresse"));
                 t.setVille(rs.getString("ville"));
-                t.setLongueur(rs.getFloat("longueur"));
-                t.setLargeur(rs.getFloat("largeur"));
+                t.setLongueur(rs.getInt("longueur"));
+                t.setLargeur(rs.getInt("largeur"));
                 t.setDisponible(rs.getBoolean("disponibilite"));
                 
 //
@@ -109,8 +109,8 @@ public class TerrainCRUD implements ICRUD<Terrain> {
                 t.setNom(rs.getString("nom"));
                 t.setAdresse(rs.getString("adresse"));
                 t.setVille(rs.getString("ville"));
-                t.setLongueur(rs.getFloat("longueur"));
-                t.setLargeur(rs.getFloat("largeur"));
+                t.setLongueur(rs.getInt("longueur"));
+                t.setLargeur(rs.getInt("largeur"));
                 t.setDisponible(rs.getBoolean("disponibilite"));
          myList.add(t);
             }
@@ -155,8 +155,8 @@ public class TerrainCRUD implements ICRUD<Terrain> {
                 String nom = rs.getString("nom");
                 String adresse = rs.getString("adresse");
                 String ville = rs.getString("ville");
-                float longueur = rs.getFloat("longueur");
-                float largeur = rs.getFloat("largeur");
+                float longueur = rs.getInt("longueur");
+                float largeur = rs.getInt("largeur");
                 boolean disponibilite = rs.getBoolean("disponibilite");
                 int ownerId = rs.getInt("owner_id");
 

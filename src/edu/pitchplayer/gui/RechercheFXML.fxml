@@ -19,5 +19,6 @@
       <Button layoutX="135.0" layoutY="347.0" mnemonicParsing="false" onAction="#EffacerAction" text="Effacer" />
       <Button layoutX="28.0" layoutY="347.0" mnemonicParsing="false" onAction="#RetourAction" text="Retour" />
       <Button layoutX="506.0" layoutY="191.0" mnemonicParsing="false" onAction="#DetailAction" text="Détails" />
+      <Button layoutX="506.0" layoutY="251.0" mnemonicParsing="false" onAction="#QRCodeAction" text="QR Code" />
    </children>
 </AnchorPane>

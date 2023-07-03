@@ -7,6 +7,7 @@ package edu.pitchplayer.services;
 
 import edu.pitchplayer.entities.Terrain;
 import edu.pitchplayer.entities.TerrainCount;
+
 import edu.pitchplayer.utils.MyConnection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,7 +28,7 @@ public class TerrainService {
 
         try {
 
-            String query = "SELECT DISTINCT nom, adresse"
+            String query = "SELECT DISTINCT nom, adresse,longueur,largeur"
                     + "FROM terrain "
                
                     + "WHERE nom like ? ";
@@ -56,6 +57,9 @@ public class TerrainService {
                 // equipe.setId(rs.getInt("id"));
                 terrain.setNom(rs.getString("nom"));
                 terrain.setAdresse(rs.getString("adresse"));
+                terrain.setLongueur(rs.getFloat("longueur"));
+terrain.setLargeur(rs.getFloat("largeur"));
+
                 equipeList.add(terrain);
             }
         } catch (SQLException ex) {
@@ -136,6 +140,9 @@ public class TerrainService {
             Terrain terrain = new Terrain();
             terrain.setNom(rs.getString("nom"));
             terrain.setAdresse(rs.getString("adresse"));
+            terrain.setLongueur(rs.getFloat("longueur"));
+terrain.setLargeur(rs.getFloat("largeur"));
+
             terrains.add(terrain);
         }
     } catch (SQLException ex) {
@@ -157,6 +164,9 @@ public class TerrainService {
                 Terrain terrain = new Terrain();
                 terrain.setNom(rs.getString("nom"));
                 terrain.setAdresse(rs.getString("adresse"));
+                terrain.setLongueur(rs.getFloat("longueur"));
+terrain.setLargeur(rs.getFloat("largeur"));
+
                 terrains.add(terrain);
             }
         } catch (SQLException ex) {
@@ -179,6 +189,9 @@ public class TerrainService {
                 Terrain terrain = new Terrain();
                 terrain.setNom(rs.getString("nom"));
                 terrain.setAdresse(rs.getString("adresse"));
+                terrain.setLongueur(rs.getFloat("longueur"));
+terrain.setLargeur(rs.getFloat("largeur"));
+
                 terrains.add(terrain);
             }
         } catch (SQLException ex) {
@@ -188,6 +201,33 @@ public class TerrainService {
         return terrains;
     }
 
+     public List<TerrainCount> getTerrainCountByTournoi() {
+        List<TerrainCount> terrainCounts = new ArrayList<>();
+
+        try {
+            String query = "SELECT t.nom, COUNT(*) AS tournoi_count " +
+                    "FROM Terrain t LEFT JOIN Tournoi tn ON t.id = tn.terrain_id " +
+                    "GROUP BY t.id " +
+                    "ORDER BY COUNT(*) DESC";
+
+            Statement st = MyConnection.getInstance().getCnx().createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                String terrainNom = rs.getString("nom");
+                int tournoiCount = rs.getInt("tournoi_count");
+                terrainCounts.add(new TerrainCount(terrainNom, tournoiCount));
+            }
+
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            System.out.println("Erreur lors de la récupération du nombre de tournois par terrain : " + ex.getMessage());
+        }
+
+        return terrainCounts;
+    }
+    
     
     
   
@@ -196,4 +236,3 @@ public class TerrainService {
 
 
     
-
