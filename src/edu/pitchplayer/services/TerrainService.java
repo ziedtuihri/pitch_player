@@ -87,40 +87,22 @@ terrain.setLargeur(rs.getFloat("largeur"));
 
         return suggestions;
     }
-//    public void displayTerrainCountByVille() {
-//    try {
-//        String query = "SELECT ville, COUNT(*) AS terrain_count FROM Terrain GROUP BY ville ORDER BY terrain_count DESC";
-//        Statement st = MyConnection.getInstance().getCnx().createStatement();
-//        ResultSet rs = st.executeQuery(query);
-//
-//        while (rs.next()) {
-//            String ville = rs.getString("ville");
-//            int terrainCount = rs.getInt("terrain_count");
-//            System.out.println("Ville: " + ville + ", Nombre de terrains: " + terrainCount);
-//        }
-//
-//        rs.close();
-//        st.close();
-//    } catch (SQLException ex) {
-//        System.out.println("Erreur lors de l'affichage du nombre de terrains par ville : " + ex.getMessage());
-//    }
-//    }
+
     public ObservableList<TerrainCount> getTerrainCountByVille() {
     ObservableList<TerrainCount> terrainCounts = FXCollections.observableArrayList();
 
-    try {
-        String query = "SELECT adresse, COUNT(*) AS terrain_count FROM Terrain GROUP BY adresse ORDER BY terrain_count DESC";
-        Statement st = MyConnection.getInstance().getCnx().createStatement();
-        ResultSet rs = st.executeQuery(query);
+    String query = "SELECT adresse, COUNT(*) AS terrain_count FROM Terrain GROUP BY adresse ORDER BY terrain_count DESC";
+    try (Statement st = MyConnection.getInstance().getCnx().createStatement();
+         ResultSet rs = st.executeQuery(query)) {
 
+        List<TerrainCount> tempList = new ArrayList<>();
         while (rs.next()) {
             String ville = rs.getString("adresse");
             int terrainCount = rs.getInt("terrain_count");
-            terrainCounts.add(new TerrainCount(ville, terrainCount));
+            tempList.add(new TerrainCount(ville, terrainCount));
         }
 
-        rs.close();
-        st.close();
+        terrainCounts.addAll(tempList);
     } catch (SQLException ex) {
         System.out.println("Erreur lors de la récupération du nombre de terrains par ville : " + ex.getMessage());
     }
@@ -201,38 +183,30 @@ terrain.setLargeur(rs.getFloat("largeur"));
         return terrains;
     }
 
-     public List<TerrainCount> getTerrainCountByTournoi() {
-        List<TerrainCount> terrainCounts = new ArrayList<>();
+    public List<Terrain> getTerrainsByVille(String ville) {
+    List<Terrain> terrains = new ArrayList<>();
 
-        try {
-            String query = "SELECT t.nom, COUNT(*) AS tournoi_count " +
-                    "FROM Terrain t LEFT JOIN Tournoi tn ON t.id = tn.terrain_id " +
-                    "GROUP BY t.id " +
-                    "ORDER BY COUNT(*) DESC";
+    try {
+        String query = "SELECT nom, image FROM terrain WHERE adresse LIKE ?";
+        PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(query);
+        pst.setString(1, "%" + ville + "%");
+        ResultSet rs = pst.executeQuery();
 
-            Statement st = MyConnection.getInstance().getCnx().createStatement();
-            ResultSet rs = st.executeQuery(query);
-
-            while (rs.next()) {
-                String terrainNom = rs.getString("nom");
-                int tournoiCount = rs.getInt("tournoi_count");
-                terrainCounts.add(new TerrainCount(terrainNom, tournoiCount));
-            }
-
-            rs.close();
-            st.close();
-        } catch (SQLException ex) {
-            System.out.println("Erreur lors de la récupération du nombre de tournois par terrain : " + ex.getMessage());
+        while (rs.next()) {
+            Terrain terrain = new Terrain();
+            terrain.setNom(rs.getString("nom"));
+            terrain.setImagePath(rs.getString("image"));
+            terrains.add(terrain);
         }
-
-        return terrainCounts;
-    }
-    
-    
-    
-  
+    } catch (SQLException ex) {
+        System.out.println("Erreur lors de la récupération des terrains par ville : " + ex.getMessage());
     }
 
-
+    return terrains;
+}
 
     
+     
+}
+
+

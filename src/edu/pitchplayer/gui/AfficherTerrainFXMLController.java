@@ -8,7 +8,9 @@ package edu.pitchplayer.gui;
 import edu.pitchplayer.entities.Terrain;
 import edu.pitchplayer.services.TerrainCRUD;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import static javafx.collections.FXCollections.observableList;
@@ -20,11 +22,20 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.me.JSONException;
+import org.json.me.JSONObject;
 
 /**
  * FXML Controller class
@@ -40,16 +51,20 @@ public class AfficherTerrainFXMLController implements Initializable {
     private TableColumn<Terrain, String> fxNom;
     @FXML
     private TableColumn<Terrain, String> fxAdresse;
-    @FXML
-    private TableColumn<Terrain, String> fxVille;
+//    private TableColumn<Terrain, String> fxVille;
     @FXML
     private TableColumn<Terrain, Float> fxLongeur;
     @FXML
     private TableColumn<Terrain, Float> fxLargeur;
+//    private TableColumn<Terrain, Boolean> fxDisponibilite;
     @FXML
-    private TableColumn<Terrain, Boolean> fxDisponibilite;
+    private Button fxRetour;
+    @FXML
+    private Button fxModifer;
+    @FXML
+    private Button fxSupprimer;
     
-   
+   private MyMemoryTranslator translator;
 
     /**
      * Initializes the controller class.
@@ -60,12 +75,14 @@ public class AfficherTerrainFXMLController implements Initializable {
         fxTerrain.setItems(terrain.getTerrain());
         fxNom.setCellValueFactory(new PropertyValueFactory<Terrain,String>("nom"));
         fxAdresse.setCellValueFactory(new PropertyValueFactory<Terrain,String>("adresse"));
-        fxVille.setCellValueFactory(new PropertyValueFactory<Terrain,String>("ville"));
+//        fxVille.setCellValueFactory(new PropertyValueFactory<Terrain,String>("ville"));
         fxLongeur.setCellValueFactory(new PropertyValueFactory<Terrain,Float>("longueur"));
         fxLargeur.setCellValueFactory(new PropertyValueFactory<Terrain,Float>("largeur"));
-        fxDisponibilite.setCellValueFactory(new PropertyValueFactory<Terrain,Boolean>("disponible"));
+//        fxDisponibilite.setCellValueFactory(new PropertyValueFactory<Terrain,Boolean>("disponible"));
 
 //        displayEntities();
+translator = new MyMemoryTranslator();
+
     }    
 
     @FXML
@@ -127,6 +144,8 @@ public class AfficherTerrainFXMLController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
+             Stage currentStage = (Stage) fxTerrain.getScene().getWindow();
+            currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -160,4 +179,122 @@ public class AfficherTerrainFXMLController implements Initializable {
         }
     }
     }
+
+    @FXML
+private void TraduireAction(ActionEvent event) throws UnsupportedEncodingException, IOException {
+    String sourceLang = "fr"; // Langue source
+    String targetLang = "en"; // Langue cible
+
+     String adresseText = fxAdresse.getText();
+    String translatedAdresse = translator.traduireTexte(adresseText, sourceLang, targetLang);
+    if (translatedAdresse != null) {
+        fxAdresse.setText(translatedAdresse);
+    } else {
+        // Gérer les erreurs de traduction pour fxLibAdresse
+    }
+    
+    // Traduire fxLibAdresse
+    String nomText = fxNom.getText();
+    String translatedNom = translator.traduireTexte(nomText, sourceLang, targetLang);
+    if (translatedNom != null) {
+        fxNom.setText(translatedNom);
+    } else {
+        // Gérer les erreurs de traduction pour fxLibAdresse
+    }
+
+    // Traduire fxLibLongueur
+//    String villeText = fxVille.getText();
+//    String translatedVille = translator.traduireTexte(villeText, sourceLang, targetLang);
+//    if (translatedVille != null) {
+//        fxVille.setText(translatedVille);
+//    } else {
+//        // Gérer les erreurs de traduction pour fxLibLongueur
+//    }
+     // Traduire fxLibLongueur
+    String largeurText = fxLargeur.getText();
+    String translatedLargeur= translator.traduireTexte(largeurText, sourceLang, targetLang);
+    if (translatedLargeur != null) {
+        fxLargeur.setText(translatedLargeur);
+    } else {
+        // Gérer les erreurs de traduction pour fxLibLongueur
+    }
+
+    // Traduire fxLibImage
+    String longeurText = fxLongeur.getText();
+    String translatedLongeur = translator.traduireTexte(longeurText, sourceLang, targetLang);
+    if (translatedLongeur != null) {
+        fxLongeur.setText(translatedLongeur );
+    } else {
+        // Gérer les erreurs de traduction pour fxLibImage
+    }
+
+    // Traduire fxAjouter
+    String modifierText = fxModifer.getText();
+    String translatedmodifier = translator.traduireTexte(modifierText, sourceLang, targetLang);
+    if (translatedmodifier != null) {
+        fxModifer.setText(translatedmodifier);
+    } else {
+        // Gérer les erreurs de traduction pour fxAjouter
+    }
+
+    // Traduire fxAnnuler
+    String supprimerText = fxSupprimer.getText();
+    String translatedsupprimer = translator.traduireTexte(supprimerText, sourceLang, targetLang);
+    if (translatedsupprimer != null) {
+        fxSupprimer.setText(translatedsupprimer);
+    } else {
+        // Gérer les erreurs de traduction pour fxAnnuler
+    }
+
+    // Traduire fxRetour
+    String retourText = fxRetour.getText();
+    String translatedRetour = translator.traduireTexte(retourText, sourceLang, targetLang);
+    if (translatedRetour != null) {
+        fxRetour.setText(translatedRetour);
+    } else {
+        // Gérer les erreurs de traduction pour fxRetour
+    }
+   
 }
+
+public class MyMemoryTranslator {
+
+    private static final String API_URL = "https://api.mymemory.translated.net/get";
+
+    public String traduireTexte(String texte, String sourceLang, String targetLang) throws IOException {
+        String encodedText = URLEncoder.encode(texte, "UTF-8");
+        String encodedLangPair = URLEncoder.encode(sourceLang + "|" + targetLang, "UTF-8");
+        String url = API_URL + "?q=" + encodedText + "&langpair=" + encodedLangPair;
+
+        HttpClient httpClient = HttpClients.createDefault();
+        HttpGet httpGet = new HttpGet(url);
+
+        HttpResponse response = httpClient.execute(httpGet);
+        HttpEntity entity = response.getEntity();
+        String jsonResponse = EntityUtils.toString(entity);
+
+        // Analyser la réponse JSON pour obtenir la traduction
+        String translatedText = parseTranslationFromJSON(jsonResponse);
+
+        return translatedText;
+    }
+
+    private String parseTranslationFromJSON(String jsonResponse) {
+       String translatedText = null;
+
+    try {
+        JSONObject jsonObject = new JSONObject(jsonResponse);
+        if (jsonObject.has("responseData")) {
+            JSONObject responseData = jsonObject.getJSONObject("responseData");
+            if (responseData.has("translatedText")) {
+                translatedText = responseData.getString("translatedText");
+            }
+        }
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+
+
+        return translatedText;
+    }
+    }}

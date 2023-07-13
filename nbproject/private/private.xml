@@ -4,20 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/TerrainService.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/tests/PitchPlayer.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/entities/TerrainCount.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/RechercheFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/DetailTerrainFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/TerrainCRUD.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/QRCodeFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/map.html</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/ModifierTerrainFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/utils/MyConnection.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/tests/FXAccueilTerrain.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/MapsFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/RechercheFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/entities/Terrain.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/AccuilTerrainFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/tests/FXRechercheTerrain.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/TerrainCRUD.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/AJouterTerrainFXMLController.java</file>
-            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/AfficherTerrainFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/QRCodeFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/interfaces/ICRUD.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/EquipeCRUD.java</file>
         </group>
     </open-files>
 </project-private>

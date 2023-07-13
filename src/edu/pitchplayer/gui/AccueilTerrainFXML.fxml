@@ -7,12 +7,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.AccuilTerrainFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.AccuilTerrainFXMLController">
    <children>
       <VBox layoutY="-2.0" prefHeight="407.0" prefWidth="149.0" style="-fx-background-color: #056063;">
          <children>
@@ -21,48 +22,47 @@
                   <Image url="@../../../image/Logo.png" />
                </image>
             </ImageView>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AjouterTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Ajouter Terrain" textFill="#f2ebeb">
+            <Button fx:id="fxAjout" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AjouterTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Ajouter Stade" textFill="#f2ebeb">
                <padding>
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AfficherTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Gestion Terrain" textFill="#f2f0f0">
+            <Button fx:id="fxGestion" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AfficherTerrainAction" prefHeight="42.0" prefWidth="199.0" style="-fx-background-color: #056063;" text="Gestion Stade" textFill="#f2f0f0">
                <padding>
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Planning Terrain" textFill="#fffbfb">
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-            </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="149.0" mnemonicParsing="false" onAction="#RechercheTerainAction" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Recherche Terrain" textFill="#fffbfb">
+            <Button fx:id="fxRechercheStade" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="149.0" mnemonicParsing="false" onAction="#RechercheTerainAction" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Recherche Stade" textFill="#fffbfb">
                <padding>
                   <Insets left="20.0" />
                </padding>
             </Button>
          </children>
       </VBox>
-      <TableView fx:id="fxVilleNbr" layoutX="211.0" layoutY="50.0" prefHeight="200.0" prefWidth="169.0">
+      <TableView fx:id="fxVilleNbr" layoutX="207.0" layoutY="60.0" prefHeight="345.0" prefWidth="334.0">
         <columns>
-          <TableColumn fx:id="fxVille" prefWidth="75.0" text="Ville" />
-          <TableColumn fx:id="fxNombre" prefWidth="94.0" text="Nbr terrain" />
+          <TableColumn fx:id="fxVille" prefWidth="136.0" text="Ville" />
+          <TableColumn fx:id="fxNombre" prefWidth="194.0" text="Nombre de Stade" />
         </columns>
       </TableView>
-      <TableView fx:id="fxTerrainTournoi" layoutX="383.0" layoutY="50.0" prefHeight="200.0" prefWidth="222.0">
-        <columns>
-          <TableColumn fx:id="fxNomTerrain" prefWidth="100.0" text="Nom terrain" />
-          <TableColumn fx:id="fxNbrTournoi" prefWidth="102.0" text="Nbr Tournoi" />
-        </columns>
-      </TableView>
-      <BarChart fx:id="fxBarChart" layoutX="252.0" layoutY="251.0" prefHeight="144.0" prefWidth="200.0">
+      <BarChart fx:id="fxBarChart" layoutX="603.0" layoutY="83.0" prefHeight="448.0" prefWidth="372.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis prefHeight="207.0" prefWidth="0.0" side="LEFT" />
         </yAxis>
       </BarChart>
+      <TextField fx:id="fxRecherche" layoutX="207.0" layoutY="14.0" prefHeight="31.0" prefWidth="159.0" promptText="Recherche" />
+      <Button fx:id="fxRechercheV" layoutX="363.0" layoutY="14.0" mnemonicParsing="false" onAction="#RechercheAction" prefHeight="31.0" prefWidth="98.0" text="Rechercher" />
+      <Button fx:id="fxDetail" layoutX="254.0" layoutY="416.0" mnemonicParsing="false" onAction="#DetailAction" text="Détails" />
+      <Button layoutX="975.0" layoutY="6.0" mnemonicParsing="false" onAction="#TraduireAction" text="Traduire" />
+      <Button fx:id="fxQuitter" alignment="BASELINE_LEFT" layoutY="395.0" mnemonicParsing="false" onAction="#QuitterAction" prefHeight="42.0" prefWidth="201.0" style="-fx-background-color: #056063;" text="Quitter" textFill="#fffbfb">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Button>
+      <Button fx:id="fxTrie" layoutX="490.0" layoutY="14.0" mnemonicParsing="false" onAction="#TrieAction" text="Trie" />
       
    </children>
 </AnchorPane>

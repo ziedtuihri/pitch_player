@@ -10,15 +10,14 @@
       <TableView fx:id="fxTerrain" layoutX="6.0" layoutY="43.0" prefHeight="222.0" prefWidth="472.0">
         <columns>
           <TableColumn fx:id="fxNom" prefWidth="76.0" text="Nom" />
-            <TableColumn fx:id="fxAdresse" prefWidth="89.0" text="Adresse" />
-            <TableColumn fx:id="fxVille" prefWidth="75.0" text="Ville" />
+            <TableColumn fx:id="fxAdresse" prefWidth="89.0" text="Ville" />
             <TableColumn fx:id="fxLongeur" prefWidth="92.0" text="Longeur" />
             <TableColumn fx:id="fxLargeur" prefWidth="75.0" text="Largeur" />
-            <TableColumn fx:id="fxDisponibilite" prefWidth="75.0" text="Dispo" />
         </columns>
       </TableView>
-      <Button layoutX="32.0" layoutY="340.0" mnemonicParsing="false" onAction="#RetourAction" text="Retour" />
-      <Button layoutX="399.0" layoutY="341.0" mnemonicParsing="false" onAction="#ModifierAction" text="Modifier" />
-      <Button layoutX="478.0" layoutY="341.0" mnemonicParsing="false" onAction="#SupprimerAction" text="Supprimer" />
+      <Button fx:id="fxRetour" layoutX="32.0" layoutY="340.0" mnemonicParsing="false" onAction="#RetourAction" text="Retour" />
+      <Button fx:id="fxModifer" layoutX="399.0" layoutY="341.0" mnemonicParsing="false" onAction="#ModifierAction" text="Modifier" />
+      <Button fx:id="fxSupprimer" layoutX="478.0" layoutY="341.0" mnemonicParsing="false" onAction="#SupprimerAction" text="Supprimer" />
+      <Button layoutX="517.0" layoutY="28.0" mnemonicParsing="false" onAction="#TraduireAction" text="Traduire" />
    </children>
 </AnchorPane>
