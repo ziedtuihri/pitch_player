@@ -12,6 +12,7 @@
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/TerrainCRUD.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/AJouterTerrainFXMLController.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/gui/QRCodeFXMLController.java</file>
+            <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/tests/FXRechercheTerrain.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/interfaces/ICRUD.java</file>
             <file>file:/C:/Users/Raouf/Documents/Projet/pitch_player/src/edu/pitchplayer/services/EquipeCRUD.java</file>
         </group>
