@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="686.0" stylesheets="@me.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.LocataireController">
+   <children>
+      <Label layoutX="31.0" layoutY="48.0" prefHeight="21.0" prefWidth="84.0" text="Recherche">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="texte_search" layoutX="115.0" layoutY="36.0" prefHeight="26.0" prefWidth="84.0" promptText="identifiant" unFocusColor="#7294ac" />
+      <JFXTextField fx:id="texte_prenom" layoutX="14.0" layoutY="177.0" prefHeight="26.0" prefWidth="130.0" promptText="Prenom" unFocusColor="#7294ac" />
+      <JFXTextField fx:id="texte_adresse" layoutX="14.0" layoutY="233.0" prefHeight="31.0" prefWidth="138.0" promptText="Adresse" unFocusColor="#7294ac" />
+      <JFXTextField fx:id="texte_nom" layoutX="14.0" layoutY="105.0" prefHeight="26.0" prefWidth="130.0" promptText="Nom" unFocusColor="#7294ac" />
+      <JFXTextField fx:id="texte_numtph" layoutX="14.0" layoutY="301.0" prefHeight="31.0" prefWidth="138.0" promptText="Numero telephone" unFocusColor="#7294ac" />
+      <TableView fx:id="tablelocataire" layoutX="171.0" layoutY="86.0" onMouseClicked="#tablelocataireEvent" prefHeight="357.0" prefWidth="503.0" style="-fx-background-color: #33698F;" stylesheets="@me.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="nom" prefWidth="88.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="86.0" text="Prenom" />
+            <TableColumn fx:id="adresse" prefWidth="91.0" text="Adresse" />
+            <TableColumn fx:id="email" prefWidth="67.0" text="Email" />
+            <TableColumn fx:id="phone" prefWidth="117.0" text="phone" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_add" layoutX="115.0" layoutY="464.0" onMouseClicked="#addlocataire" prefHeight="32.0" prefWidth="75.0" styleClass="buttons" stylesheets="@me.css" text="Ajouter" />
+      <JFXButton fx:id="btnupdate" layoutX="220.0" layoutY="464.0" onMouseClicked="#updatelocataire" prefHeight="32.0" prefWidth="95.0" styleClass="buttons" stylesheets="@me.css" text="Modifier" />
+      <JFXButton fx:id="btnremove" layoutX="332.0" layoutY="464.0" onMouseClicked="#removelocataire" prefHeight="32.0" prefWidth="84.0" styleClass="buttons" stylesheets="@me.css" text="Suprimer" />
+      <JFXTextField fx:id="texte_email" layoutX="14.0" layoutY="368.0" prefHeight="31.0" prefWidth="138.0" promptText="Email" unFocusColor="#7294ac" />
+      <Button layoutX="204.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#chercherlocataire" text="chercher" />
+   </children>
+</AnchorPane>

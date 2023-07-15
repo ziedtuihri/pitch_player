@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VBox" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.SignInController">
+   <children>
+      <Label text="se connecter" textFill="#d71c1c">
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <JFXTextField fx:id="txtusername" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Nom d'utilisateur" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="252.0" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <JFXTextField fx:id="textepassword" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="236.0" promptText="Mot de passe" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="269.0" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <JFXButton fx:id="btnpasswordforget" onAction="#send" prefHeight="32.0" prefWidth="135.0" stylesheets="@me.css" text="Mot de passe oublier?">
+               <font>
+                  <Font size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnseconnecter" onAction="#openHome" prefHeight="32.0" prefWidth="93.0" styleClass="pink-btn" stylesheets="@me.css" text="se connecter">
+               <font>
+                  <Font size="11.0" />
+               </font></JFXButton>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="15.0" right="15.0" top="20.0" />
+   </padding>
+</VBox>

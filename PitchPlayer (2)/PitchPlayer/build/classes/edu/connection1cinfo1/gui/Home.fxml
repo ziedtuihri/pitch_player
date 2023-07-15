@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.connection1cinfo1.gui.HomeController">
+   <children>
+      <Pane layoutX="196.0" prefHeight="100.0" prefWidth="679.0" style="-fx-background-color: black;" styleClass="backgrnd" stylesheets="@me.css" />
+      <AnchorPane layoutY="-8.0" prefHeight="408.0" prefWidth="154.0" style="-fx-background-color: #514c4c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-5.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="65.0" layoutY="31.0" prefHeight="21.0" prefWidth="72.0" text="Pitchplayer" textFill="#f5f4f4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="4.0" prefHeight="203.0" prefWidth="195.0" />
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="38.0" layoutY="118.0" onMouseClicked="#Acceuil" text="Acceuil" textFill="#ebe1e1" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="35.0" layoutY="454.0" onMouseClicked="#facture" prefHeight="39.0" prefWidth="95.0" text="les factures" textFill="#f8f8f8" />
+            <JFXButton layoutX="38.0" layoutY="540.0" onMouseClicked="#hestorique" text="l'Hestorique" textFill="#f2f0f0" />
+            <JFXButton layoutX="36.0" layoutY="298.0" onMouseClicked="#Reservation" text="les reservation" textFill="#f2f0f0" />
+            <JFXButton layoutX="39.0" layoutY="367.0" onMouseClicked="#contracts" text="les contrats" textFill="#ebebeb" />
+            <JFXButton layoutX="35.0" layoutY="204.0" onMouseClicked="#locataire" text="les locataires" textFill="#e4e4e4" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="192.0" layoutY="127.0" prefHeight="555.0" prefWidth="686.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="-3.0" />
+   </children>
+</AnchorPane>
