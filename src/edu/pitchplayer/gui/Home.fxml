@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #98FB98;" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.HomeController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="214.0" style="-fx-background-color: #DAF7A6;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="214.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="27.0" layoutY="87.0" prefHeight="40.0" prefWidth="158.0" text="RECLAMATION">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button id="blue" layoutX="30.0" layoutY="175.0" mnemonicParsing="false" onAction="#BackToHome" prefHeight="41.0" prefWidth="151.0" stylesheets="@stylesheet.css" text="Back To Home" />
+            <Button id="blue" layoutX="29.0" layoutY="224.0" mnemonicParsing="false" onAction="#Exit" prefHeight="41.0" prefWidth="151.0" styleClass="wrapper" stylesheets="@stylesheet.css" text="Exit" />
+         </children>
+      </Pane>
+      <Pane layoutX="336.0" layoutY="120.0" prefHeight="25.0" prefWidth="158.0">
+         <children>
+            <Button id="green" layoutX="14.0" mnemonicParsing="false" onAction="#gotoadd" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheet.css" text="Add new Reclam" />
+         </children>
+      </Pane>
+      <Pane layoutX="349.0" layoutY="154.0" prefHeight="40.0" prefWidth="131.0">
+         <children>
+            <Button id="green" layoutX="-1.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheet.css" text="Show Reclams" />
+         </children>
+      </Pane>
+      <Pane layoutX="348.0" layoutY="200.0" prefHeight="40.0" prefWidth="131.0" stylesheets="@stylesheet.css">
+         <children>
+            <Button id="green" layoutX="-1.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheet.css" text="Statistique" />
+         </children>
+      </Pane>
+      <Pane layoutX="494.0" prefHeight="91.0" prefWidth="104.0" AnchorPane.leftAnchor="494.0" AnchorPane.rightAnchor="2.0">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="103.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logorec2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

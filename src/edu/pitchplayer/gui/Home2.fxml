@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pitchplayer.gui.Home2Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="1.0" layoutY="1.0" prefHeight="492.0" prefWidth="683.0">
+               <top>
+                  <AnchorPane prefHeight="64.0" prefWidth="737.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="66.0" prefWidth="702.0" stylesheets="@dashboardDesign.css">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="53.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/reclam2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="53.0" layoutY="22.0" prefHeight="24.0" prefWidth="286.0" text="Reclam Management System">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="68.0" fitWidth="88.0" layoutX="600.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="434.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="menu_form" prefHeight="413.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane layoutX="47.0" layoutY="1.0" prefHeight="97.0" prefWidth="114.0">
+                                 <children>
+                                    <ImageView fitHeight="98.0" fitWidth="106.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/user2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="63.0" layoutY="117.0" prefHeight="21.0" prefWidth="73.0" text="Bienvenu" textFill="#26dd57">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="78.0" layoutY="138.0" prefHeight="21.0" prefWidth="45.0" text=" " textFill="#2b5531">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="65.66665649414062" layoutX="100.0" layoutY="175.0" startX="-67.0" />
+                              <Button fx:id="home_btn" layoutX="58.0" layoutY="203.0" mnemonicParsing="false" onAction="#switch_form" prefHeight="25.0" prefWidth="92.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Acceuil" />
+                              <Button fx:id="add_recbtn" layoutX="58.0" layoutY="248.0" mnemonicParsing="false" onAction="#switch_form" prefHeight="26.0" prefWidth="136.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Ajouter une reclamation" />
+                              <Button fx:id="stat_btn" layoutX="56.0" layoutY="319.0" mnemonicParsing="false" onAction="#switch_form" prefHeight="26.0" prefWidth="107.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Statistique" />
+                              <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="19.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="19.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="21.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/stat.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="logout_btn" layoutX="111.0" layoutY="381.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="76.0" styleClass="logout" stylesheets="@dashboardDesign.css" text="Logout" />
+                              <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="view_recbtn" layoutX="58.0" layoutY="287.0" mnemonicParsing="false" onAction="#switch_form" prefHeight="26.0" prefWidth="138.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="consulter vos reclamation" />
+                              <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="20.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/view%202.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="426.0" prefWidth="468.0">
+                           <children>
+                              <AnchorPane layoutX="27.0" layoutY="6.0" prefHeight="420.0" prefWidth="500.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="6.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane fx:id="statrec_form" prefHeight="165.0" prefWidth="478.0" stylesheets="@dashboardDesign.css" visible="false">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="150.0" prefWidth="219.0">
+                                             <styleClass>
+                                                <String fx:value="green-bg" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fitHeight="68.0" fitWidth="53.0" layoutX="-3.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/reclam2.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="60.0" layoutY="101.0" text="Total Of Reclams">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="nb_totale_rec" layoutX="132.0" layoutY="21.0" prefHeight="20.0" prefWidth="45.0" text="0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="253.0" layoutY="8.0" prefHeight="150.0" prefWidth="211.0" stylesheets="@dashboardDesign.css">
+                                             <styleClass>
+                                                <String fx:value="green-bg" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <Label layoutX="102.0" layoutY="101.0" text="Unread ">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="unread_rec" layoutX="137.0" layoutY="22.0" prefHeight="20.0" prefWidth="44.0" text="0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="68.0" fitWidth="53.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/croix.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="add_Form" layoutX="90.0" layoutY="14.0" prefHeight="450.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" layoutY="8.0" prefHeight="418.0" prefWidth="480.0">
+                                 <children>
+                                    <AnchorPane layoutX="15.0" layoutY="168.0" prefHeight="238.0" prefWidth="454.0">
+                                       <children>
+                                          <Label layoutX="28.0" layoutY="52.0" prefHeight="20.0" prefWidth="265.0" text="Ecrire votre reclamation ici ">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="293.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/fleche.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextArea fx:id="commenttf" layoutX="28.0" layoutY="84.0" prefHeight="101.0" prefWidth="399.0" />
+                                          <Label layoutX="32.0" layoutY="19.0" prefHeight="20.0" prefWidth="106.0" text="Sujet choisi :">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="topictf" layoutX="161.0" layoutY="17.0" prefHeight="25.0" prefWidth="181.0" />
+                                          <Button fx:id="nextbt" layoutX="339.0" layoutY="192.0" mnemonicParsing="false" onAction="#go_to_next_step" prefHeight="41.0" prefWidth="88.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Next step" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="33.0" layoutY="112.0" prefHeight="20.0" prefWidth="109.0" text="Notification">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="33.0" layoutY="73.0" prefHeight="20.0" prefWidth="46.0" text="Sujet">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="126.0" layoutY="30.0" prefHeight="25.0" prefWidth="291.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="18.0" layoutY="18.0" prefHeight="146.0" prefWidth="465.0">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="22.0" prefHeight="20.0" prefWidth="41.0" text="Date">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="TopicCb" layoutX="117.0" layoutY="61.0" onAction="#selectchoix" prefHeight="25.0" prefWidth="289.0" />
+                                    <CheckBox fx:id="mychecklist" layoutX="140.0" layoutY="104.0" mnemonicParsing="false" />
+                                    <TextField fx:id="datetf" layoutX="117.0" layoutY="20.0" prefHeight="25.0" prefWidth="291.0" />
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="202.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="showrec_form" layoutX="7.0" layoutY="6.0" prefHeight="450.0" prefWidth="502.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="416.0" prefWidth="475.0" stylesheets="@dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="3.0" layoutY="4.0" prefHeight="177.0" prefWidth="465.0" stylesheets="@dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="reclam_table_view" layoutX="7.0" layoutY="45.0" onMouseClicked="#ReclamationSelect" prefHeight="120.0" prefWidth="452.0">
+                                            <columns>
+                                              <TableColumn fx:id="rec_id" prefWidth="75.0" text="ID" />
+                                              <TableColumn fx:id="rec_date" prefWidth="75.0" text="Date" />
+                                                <TableColumn fx:id="rec_sujet" prefWidth="75.0" text="Tempo" />
+                                                <TableColumn fx:id="rec_notif" prefWidth="75.0" text="Notified/not notified" />
+                                                <TableColumn fx:id="rec_mess" prefWidth="75.0" text="Message" />
+                                                <TableColumn fx:id="rec_type" prefWidth="75.0" text="Public/Private" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="searchtf" layoutX="52.0" layoutY="14.0" prefHeight="25.0" prefWidth="204.0" promptText="search..." styleClass="textfield" stylesheets="@dashboardDesign.css">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="10.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="8.0" layoutY="189.0" prefHeight="213.0" prefWidth="459.0" stylesheets="@dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="21.0" layoutY="23.0" text="Date of reclam">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="21.0" layoutY="57.0" text="Tempo">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="21.0" layoutY="91.0" text="Message">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="date_show" layoutX="127.0" layoutY="19.0" prefHeight="25.0" prefWidth="239.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <TextField fx:id="tempo_show" layoutX="127.0" layoutY="52.0" prefHeight="25.0" prefWidth="122.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <TextField fx:id="notification_show" layoutX="268.0" layoutY="53.0" prefHeight="25.0" prefWidth="98.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <TextField fx:id="message_show" layoutX="127.0" layoutY="87.0" prefHeight="85.0" prefWidth="240.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                                          <Button fx:id="rec_update" layoutX="382.0" layoutY="87.0" mnemonicParsing="false" onAction="#update_rec" prefHeight="26.0" prefWidth="66.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Update" />
+                                          <Button fx:id="rec_delete" layoutX="384.0" layoutY="117.0" mnemonicParsing="false" onAction="#delete_rec" prefHeight="26.0" prefWidth="63.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Delete" />
+                                          <Button fx:id="rec_clear" layoutX="383.0" layoutY="146.0" mnemonicParsing="false" onAction="#clear_champ" prefHeight="26.0" prefWidth="66.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Clear" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

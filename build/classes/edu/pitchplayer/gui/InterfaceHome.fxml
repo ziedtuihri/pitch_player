@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.pitchplayer.gui.InterfaceHomeController">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="11.0" prefHeight="449.0" prefWidth="578.0">
+         <children>
+            <AnchorPane layoutX="27.0" layoutY="6.0" prefHeight="420.0" prefWidth="500.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="6.0">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Rating fx:id="pitchplayernote" layoutX="176.0" layoutY="140.0" prefHeight="32.0" prefWidth="221.0" />
+                  <Label layoutX="80.0" layoutY="77.0" prefHeight="31.0" prefWidth="405.0" text="s'il vous plaît donner une note à pitchplayer" textFill="#34692c">
+                     <font>
+                        <Font name="System Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="282.0" layoutX="119.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="188.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Envoyer" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
